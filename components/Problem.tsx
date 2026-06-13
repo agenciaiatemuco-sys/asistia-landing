@@ -1,0 +1,45 @@
+const problems = [
+  {
+    icon: "📵",
+    title: "Clientes que no esperan",
+    body: "Si no respondes en minutos, se van con la competencia.",
+  },
+  {
+    icon: "🔁",
+    title: "Siempre las mismas preguntas",
+    body: "Horarios, precios, disponibilidad. Tu tiempo vale más.",
+  },
+  {
+    icon: "🌙",
+    title: "Cerrado fuera de horario",
+    body: "Tus clientes escriben a las 10pm. Sin respuesta, pierdes la venta.",
+  },
+];
+
+export default function Problem() {
+  return (
+    <section className="py-20 px-4" style={{ backgroundColor: "#f9fafb" }}>
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
+          ¿Te suena familiar?
+        </h2>
+        <p className="text-center text-gray-500 mb-12 text-sm">
+          Si alguna de estas situaciones te describe, Asistia es para ti.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {problems.map((p) => (
+            <div
+              key={p.title}
+              className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+            >
+              <div className="text-4xl mb-4">{p.icon}</div>
+              <h3 className="font-semibold text-gray-900 mb-2">{p.title}</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">{p.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
