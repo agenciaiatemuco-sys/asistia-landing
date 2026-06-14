@@ -6,11 +6,11 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 
 export const metadata: Metadata = {
-  title: "Asistia — Tu negocio se atiende solo, las 24 horas",
+  title: "AsistIA — Tu negocio se atiende solo, las 24 horas",
   description:
     "Asistente con IA para WhatsApp. Responde consultas, agenda citas y atiende clientes automáticamente. Actívalo en 10 minutos.",
   openGraph: {
-    title: "Asistia — Tu negocio se atiende solo, las 24 horas",
+    title: "AsistIA — Tu negocio se atiende solo, las 24 horas",
     description:
       "Asistente con IA para WhatsApp. Responde consultas, agenda citas y atiende clientes automáticamente.",
     type: "website",

@@ -3,11 +3,11 @@ export default function Footer() {
     <footer className="py-12 px-4" style={{ backgroundColor: "#111827" }}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
         <a href="#" className="text-xl font-bold" style={{ color: "#10b981" }}>
-          ✦ Asistia
+          ✦ AsistIA
         </a>
 
         <p className="text-gray-500 text-xs">
-          © 2026 Asistia. Todos los derechos reservados.
+          © 2026 AsistIA. Todos los derechos reservados.
         </p>
 
         <div className="flex items-center gap-6">

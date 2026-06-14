@@ -1,8 +1,8 @@
 const cases = [
-  { icon: "🏥", label: "Clínicas y salud" },
+  { icon: "💆", label: "Centros médicos y estéticos" },
   { icon: "🛍️", label: "Comercios y tiendas" },
   { icon: "✂️", label: "Barberías y belleza" },
-  { icon: "🍽️", label: "Restaurantes y delivery" },
+  { icon: "🛒", label: "Ventas y catálogos" },
   { icon: "🏋️", label: "Fitness y educación" },
   { icon: "⚖️", label: "Servicios profesionales" },
 ];
@@ -15,7 +15,7 @@ export default function UseCases() {
           Funciona para tu tipo de negocio
         </h2>
         <p className="text-center text-gray-500 mb-12 text-sm">
-          Asistia se adapta a cualquier industria que use WhatsApp para atender clientes.
+          AsistIA se adapta a cualquier industria que use WhatsApp para atender clientes.
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">

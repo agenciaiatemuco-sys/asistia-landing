@@ -2,6 +2,9 @@
 
 import { useState, useEffect } from "react";
 
+const DASHBOARD_URL =
+  process.env.NEXT_PUBLIC_DASHBOARD_URL ?? "https://panel.miasistia.cl/login";
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,7 +24,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="text-xl font-bold" style={{ color: "#10b981" }}>
-          ✦ Asistia
+          ✦ AsistIA
         </a>
 
         {/* Desktop nav */}
@@ -39,7 +42,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <a
-            href="#precios"
+            href={DASHBOARD_URL}
             className="px-4 py-2 rounded-lg text-sm font-medium text-white transition-opacity hover:opacity-90"
             style={{ backgroundColor: "#10b981" }}
           >

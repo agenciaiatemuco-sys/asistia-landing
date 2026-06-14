@@ -19,7 +19,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg text-gray-500 mb-8 leading-relaxed max-w-lg">
-            Asistia conecta tu WhatsApp con inteligencia artificial. Responde
+            AsistIA conecta tu WhatsApp con inteligencia artificial. Responde
             consultas, agenda citas y atiende clientes automáticamente —
             mientras tú te dedicas a lo que importa.
           </p>
@@ -66,7 +66,7 @@ export default function Hero() {
                 A
               </div>
               <div>
-                <p className="text-white text-sm font-semibold leading-tight">Asistia ✦</p>
+                <p className="text-white text-sm font-semibold leading-tight">AsistIA ✦</p>
                 <p className="text-xs" style={{ color: "#a7f3d0" }}>en línea</p>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function Hero() {
               {/* Bot bubble 1 */}
               <div className="flex justify-start bubble-appear bubble-2">
                 <div className="max-w-[82%] px-3 py-2 rounded-lg rounded-tl-sm text-sm text-gray-800 bg-white shadow-sm">
-                  ¡Hola! Soy Asistia 🤖 Con gusto te ayudo. ¿Cuál es tu nombre completo?
+                  ¡Hola! Soy AsistIA 🤖 Con gusto te ayudo. ¿Cuál es tu nombre completo?
                   <span className="block text-right text-[10px] text-gray-400 mt-1">10:31</span>
                 </div>
               </div>
