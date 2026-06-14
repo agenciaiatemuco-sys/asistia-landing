@@ -1,12 +1,16 @@
+const CONTRATAR_BASE =
+  process.env.NEXT_PUBLIC_DASHBOARD_URL ||
+  "https://dashboard-saas-blush.vercel.app";
+
 const plans = [
   {
     key: "starter",
     name: "Starter",
-    price: "$95.000",
+    price: "$89.000",
     interactions: "1.000/mes",
     daily: "~7/día",
     ideal: "Profesional independiente",
-    url: process.env.NEXT_PUBLIC_FLOW_URL_STARTER || "#",
+    url: `${CONTRATAR_BASE}/contratar?plan=starter`,
   },
   {
     key: "pro",
@@ -16,25 +20,25 @@ const plans = [
     daily: "~17/día",
     ideal: "Negocio en crecimiento",
     popular: true,
-    url: process.env.NEXT_PUBLIC_FLOW_URL_PRO || "#",
+    url: `${CONTRATAR_BASE}/contratar?plan=pro`,
   },
   {
     key: "business",
     name: "Business",
-    price: "$220.000",
+    price: "$210.000",
     interactions: "7.000/mes",
     daily: "~47/día",
     ideal: "Clínica o alto flujo",
-    url: process.env.NEXT_PUBLIC_FLOW_URL_BUSINESS || "#",
+    url: `${CONTRATAR_BASE}/contratar?plan=business`,
   },
   {
     key: "enterprise",
     name: "Enterprise",
-    price: "$320.000",
+    price: "$290.000",
     interactions: "15.000/mes",
     daily: "~100/día",
     ideal: "Centro de alta concurrencia",
-    url: process.env.NEXT_PUBLIC_FLOW_URL_ENTERPRISE || "#",
+    url: `${CONTRATAR_BASE}/contratar?plan=enterprise`,
   },
 ];
 
