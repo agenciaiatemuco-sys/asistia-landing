@@ -1,6 +1,5 @@
 const CONTRATAR_BASE =
-  process.env.NEXT_PUBLIC_DASHBOARD_URL ||
-  "https://dashboard-saas-blush.vercel.app";
+  process.env.NEXT_PUBLIC_DASHBOARD_URL || "https://panel.miasistia.cl";
 
 const plans = [
   {
@@ -48,13 +47,21 @@ export default function Pricing() {
   return (
     <section id="precios" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-        {/* Launch banner */}
+        {/* TODO: Actualizar manualmente cuando termine la oferta (30/06/2026 o al llegar a 10 clientes).
+            Para hacerlo dinámico requiere Supabase en asistia-landing o un endpoint /api/promo/status en dashboard-saas. */}
         <div
-          className="rounded-2xl px-6 py-4 text-center text-sm font-medium mb-12"
-          style={{ backgroundColor: "#d1fae5", color: "#065f46" }}
+          className="rounded-2xl px-6 py-5 text-center mb-12"
+          style={{ backgroundColor: "#fef3c7", border: "1px solid #f59e0b" }}
         >
-          🎉 Oferta de lanzamiento: Instalación{" "}
-          <strong>$100.000 CLP</strong> (pago único) + primer mes completamente gratis.
+          <p className="text-xl font-bold text-amber-800">
+            🎉 Oferta de Junio: Instalación con 70% OFF
+          </p>
+          <p className="text-base text-amber-700 mt-1">
+            <strong>$30.000 CLP</strong>{" "}
+            <span className="line-through" style={{ color: "#b45309" }}>antes $100.000</span>
+            {" "}+ primer mes completamente gratis.{" "}
+            <strong>Solo quedan algunos cupos.</strong>
+          </p>
         </div>
 
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-3">

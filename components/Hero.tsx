@@ -7,10 +7,17 @@ export default function Hero() {
         {/* Copy */}
         <div>
           <span
-            className="inline-block px-3 py-1 text-sm font-medium rounded-full mb-6"
+            className="inline-block px-3 py-1 text-sm font-medium rounded-full mb-3"
             style={{ backgroundColor: "#d1fae5", color: "#065f46" }}
           >
             Asistente IA para WhatsApp
+          </span>
+          {/* TODO: Ocultar manualmente el 30/06/2026 o cuando se llegue a 10 clientes. */}
+          <span
+            className="inline-block px-3 py-1 text-sm font-semibold rounded-full mb-6"
+            style={{ backgroundColor: "#fef3c7", color: "#92400e" }}
+          >
+            🎉 Oferta de Junio: 70% OFF en instalación
           </span>
 
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
