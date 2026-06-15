@@ -38,7 +38,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-xl font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors"
             >
-              💬 Hablar con Asistia
+              💬 Hablar con AsistIA
             </a>
           </div>
 
