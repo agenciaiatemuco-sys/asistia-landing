@@ -2,7 +2,7 @@ const rows = [
   {
     label: "Costo mensual",
     human: "$500.000–$700.000 CLP",
-    asistia: "$95.000 CLP",
+    asistia: "$89.000 CLP",
   },
   {
     label: "Horario",
@@ -27,7 +27,7 @@ const rows = [
   {
     label: "Ahorro anual",
     human: "—",
-    asistia: "$4.860.000–$7.260.000 CLP",
+    asistia: "$4.932.000–$7.332.000 CLP",
     highlight: true,
   },
 ];
@@ -37,7 +37,7 @@ export default function Comparison() {
     <section className="py-20 px-4" style={{ backgroundColor: "#f9fafb" }}>
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-3">
-          ¿Cuánto te cuesta no tener Asistia?
+          ¿Cuánto te cuesta no tener AsistIA?
         </h2>
         <p className="text-center text-gray-500 mb-12 text-sm">
           Compara el costo real de una persona vs. tu asistente IA.
@@ -52,7 +52,7 @@ export default function Comparison() {
                   Recepcionista
                 </th>
                 <th className="py-4 px-6 text-center font-semibold" style={{ color: "#10b981" }}>
-                  ✦ Asistia Starter
+                  ✦ AsistIA Starter
                 </th>
               </tr>
             </thead>
