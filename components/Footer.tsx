@@ -6,9 +6,17 @@ export default function Footer() {
           ✦ AsistIA
         </a>
 
-        <p className="text-gray-500 text-xs">
-          © 2026 AsistIA. Todos los derechos reservados.
-        </p>
+        <div className="flex flex-col items-center gap-1">
+          <p className="text-gray-500 text-xs">
+            © 2026 AsistIA. Todos los derechos reservados.
+          </p>
+          <a
+            href="/privacidad"
+            className="text-gray-600 hover:text-gray-400 transition-colors text-xs underline underline-offset-2"
+          >
+            Política de Privacidad
+          </a>
+        </div>
 
         <div className="flex items-center gap-6">
           <a
