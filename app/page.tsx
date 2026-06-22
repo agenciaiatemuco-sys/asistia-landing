@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import HowItWorks from "@/components/HowItWorks";
 import UseCases from "@/components/UseCases";
+import Showroom from "@/components/Showroom";
 import Pricing from "@/components/Pricing";
 import Comparison from "@/components/Comparison";
 import Testimonials from "@/components/Testimonials";
@@ -19,6 +20,7 @@ export default function Home() {
         <Problem />
         <HowItWorks />
         <UseCases />
+        <Showroom />
         <Pricing />
         <Comparison />
         <Testimonials />
