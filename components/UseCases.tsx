@@ -9,13 +9,13 @@ const cases = [
 
 export default function UseCases() {
   return (
-    <section className="py-20 px-4" style={{ backgroundColor: "#f9fafb" }}>
+    <section className="py-20 px-4 bg-slate-50 border-t border-slate-100">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-3">
           Funciona para tu tipo de negocio
         </h2>
         <p className="text-center text-gray-500 mb-12 text-sm">
-          AsistIA se adapta a cualquier industria que use WhatsApp para atender clientes.
+          AsistIA se adapta al lenguaje y necesidades de cada rubro
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">

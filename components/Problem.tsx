@@ -18,10 +18,10 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="py-20 px-4" style={{ backgroundColor: "#f9fafb" }}>
+    <section className="py-20 px-4 bg-white border-t border-slate-100">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">
-          ¿Te suena familiar?
+          El problema que resolvemos
         </h2>
         <p className="text-center text-gray-500 mb-12 text-sm">
           Si alguna de estas situaciones te describe, AsistIA es para ti.
@@ -31,7 +31,7 @@ export default function Problem() {
           {problems.map((p) => (
             <div
               key={p.title}
-              className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+              className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
             >
               <div className="text-4xl mb-4">{p.icon}</div>
               <h3 className="font-semibold text-gray-900 mb-2">{p.title}</h3>

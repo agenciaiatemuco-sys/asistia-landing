@@ -23,8 +23,8 @@ export default function Pricing() {
               <li className="flex items-center gap-2"><span className="text-emerald-500 font-bold">✓</span> 400 interacciones/mes</li>
               <li className="flex items-center gap-2"><span className="text-emerald-500 font-bold">✓</span> Solo administrador</li>
               <li className="flex items-center gap-2"><span className="text-emerald-500 font-bold">✓</span> Panel completo</li>
-              <li className="flex items-center gap-2"><span className="text-emerald-500 font-bold">✓</span> Agendamiento incluido</li>
-              <li className="flex items-center gap-2"><span className="text-emerald-500 font-bold">✓</span> Soporte por chat</li>
+              <li className="flex items-center gap-2"><span className="text-emerald-500 font-bold">✓</span> Agendamiento automático</li>
+              <li className="flex items-center gap-2"><span className="text-emerald-500 font-bold">✓</span> Soporte por WhatsApp</li>
             </ul>
             <a href="https://panel.miasistia.cl/contratar?plan=micro"
                className="block w-full py-3 text-center bg-white border-2 border-emerald-600 text-emerald-700 font-bold rounded-xl hover:bg-emerald-50 transition text-sm">
@@ -49,8 +49,8 @@ export default function Pricing() {
               <li className="flex items-center gap-2"><span className="text-emerald-300 font-bold">✓</span> 1.000 interacciones/mes</li>
               <li className="flex items-center gap-2"><span className="text-emerald-300 font-bold">✓</span> 1 colaborador</li>
               <li className="flex items-center gap-2"><span className="text-emerald-300 font-bold">✓</span> Panel completo</li>
-              <li className="flex items-center gap-2"><span className="text-emerald-300 font-bold">✓</span> Google Calendar</li>
-              <li className="flex items-center gap-2"><span className="text-emerald-300 font-bold">✓</span> Soporte prioritario</li>
+              <li className="flex items-center gap-2"><span className="text-emerald-300 font-bold">✓</span> Agendamiento automático</li>
+              <li className="flex items-center gap-2"><span className="text-emerald-300 font-bold">✓</span> Soporte por WhatsApp</li>
             </ul>
             <a href="https://panel.miasistia.cl/contratar?plan=starter"
                className="block w-full py-3 text-center bg-white text-emerald-700 font-bold rounded-xl hover:bg-emerald-50 transition text-sm">

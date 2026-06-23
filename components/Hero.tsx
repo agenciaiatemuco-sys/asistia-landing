@@ -23,7 +23,7 @@ export default function Hero() {
             className="inline-block px-3 py-1 text-xs font-semibold rounded-full mb-4"
             style={{ backgroundColor: "#fef3c7", color: "#92400e" }}
           >
-            🎉 14 días gratis — hasta 30/06 o primeros 10 cupos
+            🎉 14 días gratis — Oferta de lanzamiento
           </span>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-5 leading-tight">

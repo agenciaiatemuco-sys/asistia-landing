@@ -81,3 +81,7 @@ body {
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
+
+section {
+  scroll-margin-top: 80px;
+}

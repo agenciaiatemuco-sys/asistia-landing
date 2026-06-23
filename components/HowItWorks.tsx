@@ -21,7 +21,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="como-funciona" className="py-20 px-4 bg-white">
+    <section id="como-funciona" className="py-20 px-4 bg-white border-t border-slate-100">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-3">
           Activa tu asistente en 3 pasos
