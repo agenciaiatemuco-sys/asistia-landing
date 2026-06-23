@@ -1,55 +1,77 @@
-const WA_NUMBER = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "").replace(/\D/g, "");
+const WA_NUMBER = "56981748168";
 
-const verticals = [
-  { icon: "🏥", label: "Salud e Imagenología", desc: "Exámenes, laboratorio, radiología", tag: "demo-salud" },
-  { icon: "👨‍⚕️", label: "Clínica Médica", desc: "Consultas médicas y especialidades", tag: "demo-medico" },
-  { icon: "💆", label: "Estética y Belleza", desc: "Depilación, tratamientos faciales, peluquería", tag: "demo-estetica" },
-  { icon: "⚖️", label: "Legal y Consultoría", desc: "Abogados, contadores, asesorías", tag: "demo-legal" },
-  { icon: "🛍️", label: "E-commerce", desc: "Tiendas online, catálogos, ventas", tag: "demo-ecommerce" },
-  { icon: "🦷", label: "Odontología", desc: "Clínicas dentales y salud bucal", tag: "demo-odonto" },
+const DEMOS = [
+  {
+    tag: "demo-salud",
+    emoji: "🏥",
+    title: "Clínica / Salud",
+    desc: "Agendamiento de horas médicas, respuestas sobre especialidades y horarios.",
+  },
+  {
+    tag: "demo-medico",
+    emoji: "👨‍⚕️",
+    title: "Médico independiente",
+    desc: "Consultas privadas, valor de la consulta y disponibilidad de agenda.",
+  },
+  {
+    tag: "demo-estetica",
+    emoji: "💅",
+    title: "Centro de estética",
+    desc: "Tratamientos faciales, corporales, precios y reservas.",
+  },
+  {
+    tag: "demo-legal",
+    emoji: "⚖️",
+    title: "Estudio jurídico",
+    desc: "Consulta de áreas de práctica, honorarios y primeras consultas.",
+  },
+  {
+    tag: "demo-ecommerce",
+    emoji: "🛍️",
+    title: "E-commerce",
+    desc: "Estado de pedidos, catálogo, métodos de pago y despacho.",
+  },
+  {
+    tag: "demo-odonto",
+    emoji: "🦷",
+    title: "Dental / Odontología",
+    desc: "Agendamiento de urgencias, procedimientos y aranceles.",
+  },
 ];
 
 export default function Showroom() {
   return (
-    <section className="py-20 px-4 bg-white">
+    <section id="showroom" className="py-20 px-4 bg-slate-900">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-4">
-          <span
-            className="inline-block px-3 py-1 text-sm font-medium rounded-full mb-3"
-            style={{ backgroundColor: "#d1fae5", color: "#065f46" }}
-          >
-            ✦ Demo interactiva
-          </span>
-        </div>
-
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-3">
-          Prueba AsistIA en tu rubro
+        <h2 className="text-3xl font-bold text-center text-white mb-3">
+          Pruébalo ahora mismo
         </h2>
-        <p className="text-center text-gray-500 text-sm mb-12">
-          Elige tu tipo de negocio y chatea ahora mismo con un asistente real por WhatsApp
+        <p className="text-center text-slate-400 mb-12 text-sm">
+          Escríbele a AsistIA por WhatsApp y experimenta la demo de tu rubro.
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          {verticals.map((v) => (
-            <div
-              key={v.tag}
-              className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {DEMOS.map((d) => (
+            <a
+              key={d.tag}
+              href={`https://wa.me/${WA_NUMBER}?text=${d.tag}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="demo-card block p-5 rounded-2xl border border-slate-700 bg-slate-800 transition-all cursor-pointer"
             >
-              <div className="text-4xl mb-3">{v.icon}</div>
-              <p className="font-semibold text-gray-800 text-sm mb-1">{v.label}</p>
-              <p className="text-xs text-gray-400 mb-4">{v.desc}</p>
-              <a
-                href={`https://wa.me/${WA_NUMBER}?text=${v.tag}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-4 py-2 rounded-xl text-white text-xs font-semibold"
-                style={{ backgroundColor: "#10b981" }}
-              >
-                Probar ahora 💬
-              </a>
-            </div>
+              <div className="text-3xl mb-3">{d.emoji}</div>
+              <h3 className="font-semibold text-white mb-1">{d.title}</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">{d.desc}</p>
+              <p className="mt-3 text-xs font-medium" style={{ color: "#10b981" }}>
+                Probar demo →
+              </p>
+            </a>
           ))}
         </div>
+
+        <p className="text-center text-slate-500 text-xs mt-8">
+          Al escribir se abrirá WhatsApp con el mensaje de inicio precargado.
+        </p>
       </div>
     </section>
   );

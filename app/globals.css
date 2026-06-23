@@ -53,3 +53,31 @@ body {
   opacity: 0;
   animation: fadeIn 0.5s ease forwards;
 }
+
+/* Demo showroom cards */
+.demo-card:hover {
+  border-color: #10b981;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #10b981, #059669);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero radial glow */
+.hero-glow {
+  background: radial-gradient(ellipse at 60% 50%, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+}
+
+/* Float animation for chat mockup */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}

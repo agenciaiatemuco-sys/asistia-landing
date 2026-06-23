@@ -1,28 +1,34 @@
-const WA_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "56912345678";
+const WA_NUMBER = "56981748168";
+const DASHBOARD_URL =
+  process.env.NEXT_PUBLIC_DASHBOARD_URL ?? "https://panel.miasistia.cl";
+
+const CHECKMARKS = [
+  "Sin permanencia",
+  "14 días gratis",
+  "Activo en 10 min",
+  "Sin tarjeta al inicio",
+];
 
 export default function Hero() {
   return (
-    <section className="pt-28 pb-20 px-4 bg-white">
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+    <section className="relative pt-28 pb-20 px-4 bg-white overflow-hidden">
+      {/* Radial glow background */}
+      <div className="absolute inset-0 hero-glow pointer-events-none" />
+
+      <div className="relative max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
         {/* Copy */}
         <div>
+          {/* Badge oferta */}
           <span
-            className="inline-block px-3 py-1 text-sm font-medium rounded-full mb-3"
-            style={{ backgroundColor: "#d1fae5", color: "#065f46" }}
-          >
-            Asistente IA para WhatsApp
-          </span>
-          {/* TODO: Ocultar manualmente el 30/06/2026 o cuando se llegue a 10 clientes. */}
-          <span
-            className="inline-block px-3 py-1 text-sm font-semibold rounded-full mb-6"
+            className="inline-block px-3 py-1 text-xs font-semibold rounded-full mb-4"
             style={{ backgroundColor: "#fef3c7", color: "#92400e" }}
           >
-            🎉 Oferta de Junio: 70% OFF en instalación
+            🎉 14 días gratis — hasta 30/06 o primeros 10 cupos
           </span>
 
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-5 leading-tight">
             Tu negocio se atiende solo,{" "}
-            <span style={{ color: "#10b981" }}>las 24 horas</span>
+            <span className="gradient-text">las 24 horas</span>
           </h1>
 
           <p className="text-lg text-gray-500 mb-8 leading-relaxed max-w-lg">
@@ -31,13 +37,13 @@ export default function Hero() {
             mientras tú te dedicas a lo que importa.
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 mb-8">
             <a
-              href="#precios"
+              href={`${DASHBOARD_URL}/contratar`}
               className="px-6 py-3 rounded-xl font-semibold text-white transition-opacity hover:opacity-90 shadow-sm"
               style={{ backgroundColor: "#10b981" }}
             >
-              Ver planes →
+              Empezar gratis →
             </a>
             <a
               href={`https://wa.me/${WA_NUMBER}`}
@@ -49,16 +55,21 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Social proof mini */}
-          <p className="mt-8 text-sm text-gray-400">
-            ✓ Sin permanencia &nbsp;·&nbsp; ✓ Primer mes gratis &nbsp;·&nbsp; ✓ Activo en 10 min
-          </p>
+          {/* 4 checkmarks */}
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            {CHECKMARKS.map((c) => (
+              <span key={c} className="flex items-center gap-1.5 text-sm text-gray-500">
+                <span className="text-emerald-500 font-bold">✓</span>
+                {c}
+              </span>
+            ))}
+          </div>
         </div>
 
-        {/* WhatsApp chat mockup */}
+        {/* WhatsApp chat mockup — kinesiología */}
         <div className="flex justify-center lg:justify-end">
           <div
-            className="w-72 rounded-3xl overflow-hidden shadow-2xl border border-black/5"
+            className="animate-float w-72 rounded-3xl overflow-hidden shadow-2xl border border-black/5"
             style={{ fontFamily: "system-ui, -apple-system, sans-serif" }}
           >
             {/* WA Header */}
@@ -70,53 +81,53 @@ export default function Hero() {
                 className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0"
                 style={{ backgroundColor: "#10b981" }}
               >
-                A
+                K
               </div>
               <div>
-                <p className="text-white text-sm font-semibold leading-tight">AsistIA ✦</p>
+                <p className="text-white text-sm font-semibold leading-tight">Kinesiología Salud ✦</p>
                 <p className="text-xs" style={{ color: "#a7f3d0" }}>en línea</p>
               </div>
             </div>
 
             {/* Chat body */}
             <div
-              className="p-3 space-y-2.5 min-h-60"
+              className="p-3 space-y-2.5 min-h-64"
               style={{ backgroundColor: "#e5ddd5" }}
             >
-              {/* User bubble 1 */}
+              {/* User 1 */}
               <div className="flex justify-end bubble-appear bubble-1">
                 <div
-                  className="max-w-[82%] px-3 py-2 rounded-lg rounded-tr-sm text-sm text-gray-800 shadow-sm"
+                  className="max-w-[85%] px-3 py-2 rounded-lg rounded-tr-sm text-sm text-gray-800 shadow-sm"
                   style={{ backgroundColor: "#dcf8c6" }}
                 >
-                  Hola, ¿tienen hora disponible para mañana?
+                  Hola, me duele la espalda baja, ¿tienen hora para mañana?
                   <span className="block text-right text-[10px] text-gray-400 mt-1">10:31 ✓✓</span>
                 </div>
               </div>
 
-              {/* Bot bubble 1 */}
+              {/* Bot 1 */}
               <div className="flex justify-start bubble-appear bubble-2">
-                <div className="max-w-[82%] px-3 py-2 rounded-lg rounded-tl-sm text-sm text-gray-800 bg-white shadow-sm">
-                  ¡Hola! Soy AsistIA 🤖 Con gusto te ayudo. ¿Cuál es tu nombre completo?
+                <div className="max-w-[85%] px-3 py-2 rounded-lg rounded-tl-sm text-sm text-gray-800 bg-white shadow-sm">
+                  ¡Hola! Soy Ana 😊 Con gusto te ayudo. ¿A qué hora te acomoda mañana?
                   <span className="block text-right text-[10px] text-gray-400 mt-1">10:31</span>
                 </div>
               </div>
 
-              {/* User bubble 2 */}
+              {/* User 2 */}
               <div className="flex justify-end bubble-appear bubble-3">
                 <div
-                  className="max-w-[82%] px-3 py-2 rounded-lg rounded-tr-sm text-sm text-gray-800 shadow-sm"
+                  className="max-w-[85%] px-3 py-2 rounded-lg rounded-tr-sm text-sm text-gray-800 shadow-sm"
                   style={{ backgroundColor: "#dcf8c6" }}
                 >
-                  Me llamo María González
+                  A las 11:00 me viene bien
                   <span className="block text-right text-[10px] text-gray-400 mt-1">10:32 ✓✓</span>
                 </div>
               </div>
 
-              {/* Bot bubble 2 */}
+              {/* Bot 2 */}
               <div className="flex justify-start bubble-appear bubble-4">
-                <div className="max-w-[82%] px-3 py-2 rounded-lg rounded-tl-sm text-sm text-gray-800 bg-white shadow-sm">
-                  ¡Perfecto, María! ✅ Te agendé para mañana a las 10:00 AM. ¡Hasta pronto! 😊
+                <div className="max-w-[85%] px-3 py-2 rounded-lg rounded-tl-sm text-sm text-gray-800 bg-white shadow-sm">
+                  ✅ Cita agendada para mañana a las 11:00. ¡Te esperamos, cuídate mucho! 😊
                   <span className="block text-right text-[10px] text-gray-400 mt-1">10:32</span>
                 </div>
               </div>

@@ -2,63 +2,44 @@
 
 import { useState } from "react";
 
-const faqs = [
+const ITEMS = [
   {
-    q: "¿Necesito saber programar?",
-    a: "No. El proceso es 100% visual. Configuras tu asistente respondiendo preguntas simples sobre tu negocio, sin código ni técnicos.",
+    q: "¿Necesito instalar algo en mi teléfono?",
+    a: "No. AsistIA se conecta a tu número de WhatsApp Business actual mediante un código QR. Nada que instalar, sin cambios de número.",
   },
   {
-    q: "¿Funciona con mi número de WhatsApp actual?",
-    a: "Sí. Simplemente escaneas un código QR desde tu celular y tu número queda conectado. No necesitas cambiar de número ni de app.",
-  },
-  {
-    q: "¿Qué pasa si se acaban las interacciones del mes?",
-    a: "El asistente se pausa automáticamente cuando alcanza el límite. Te notificamos antes de llegar al tope para que puedas ampliar tu plan si lo necesitas.",
+    q: "¿Qué pasa cuando termina el período de prueba?",
+    a: "Al vencer los 14 días te avisamos por WhatsApp. Si no contratas, el bot queda pausado y tus datos se conservan por 30 días.",
   },
   {
     q: "¿Puedo cancelar cuando quiera?",
-    a: "Sí. Sin cláusulas de permanencia ni multas. Cancelas cuando quieras sin costos adicionales.",
+    a: "Sí, sin penalidades ni permanencia mínima. Puedes cancelar desde tu panel en cualquier momento.",
   },
   {
-    q: "¿En cuánto tiempo está activo mi asistente?",
-    a: "Menos de 10 minutos. Escaneas el QR, respondes algunas preguntas sobre tu negocio y tu asistente queda activo inmediatamente.",
+    q: "¿El bot puede agendar citas en Google Calendar?",
+    a: "Sí. AsistIA se integra con tu Google Calendar y gestiona la disponibilidad en tiempo real para evitar doble booking.",
   },
   {
-    q: "¿Qué diferencia hay con un chatbot normal?",
-    a: "Un chatbot sigue menús fijos y opciones predefinidas. Asistia entiende lenguaje natural — interpreta preguntas libres, responde de forma fluida y se adapta a cada conversación como lo haría una persona.",
+    q: "¿Puedo personalizar las respuestas del asistente?",
+    a: "Sí. Desde el panel editas la personalidad, el tono de comunicación, el catálogo de servicios y las instrucciones específicas del bot.",
+  },
+  {
+    q: "¿Qué pasa si el bot no sabe responder algo?",
+    a: "El bot escala automáticamente al equipo humano cuando detecta que la consulta supera su alcance o el cliente lo solicita.",
+  },
+  {
+    q: "¿Mis datos y los de mis clientes están seguros?",
+    a: "Sí. Usamos Supabase y Airtable con acceso cifrado. Los datos de tus clientes nunca se comparten con terceros.",
+  },
+  {
+    q: "¿Funciona para rubros fuera de salud?",
+    a: "Absolutamente. AsistIA está activo en clínicas, estudios jurídicos, centros de estética, e-commerce y más. El asistente se adapta a cualquier negocio.",
   },
 ];
 
-function AccordionItem({ q, a }: { q: string; a: string }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div className="border-b border-gray-100 last:border-0">
-      <button
-        className="w-full flex justify-between items-center py-4 text-left text-gray-900 font-medium text-sm hover:text-emerald-600 transition-colors gap-4"
-        onClick={() => setOpen((o) => !o)}
-        aria-expanded={open}
-      >
-        <span>{q}</span>
-        <span
-          className="text-xl shrink-0 leading-none transition-transform duration-200"
-          style={{
-            color: "#10b981",
-            transform: open ? "rotate(45deg)" : "rotate(0deg)",
-          }}
-        >
-          +
-        </span>
-      </button>
-
-      {open && (
-        <p className="pb-4 text-sm text-gray-500 leading-relaxed pr-8">{a}</p>
-      )}
-    </div>
-  );
-}
-
 export default function FAQ() {
+  const [open, setOpen] = useState<number | null>(null);
+
   return (
     <section id="faq" className="py-20 px-4 bg-white">
       <div className="max-w-3xl mx-auto">
@@ -66,12 +47,30 @@ export default function FAQ() {
           Preguntas frecuentes
         </h2>
         <p className="text-center text-gray-500 mb-12 text-sm">
-          ¿Tienes más dudas? Escríbenos por WhatsApp.
+          Todo lo que necesitas saber antes de empezar.
         </p>
 
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 px-6 py-2">
-          {faqs.map((faq) => (
-            <AccordionItem key={faq.q} q={faq.q} a={faq.a} />
+        <div className="bg-slate-50 rounded-2xl overflow-hidden divide-y divide-gray-200">
+          {ITEMS.map((item, i) => (
+            <div key={i}>
+              <button
+                className="w-full text-left px-6 py-4 flex items-center justify-between gap-4 hover:bg-slate-100 transition-colors"
+                onClick={() => setOpen(open === i ? null : i)}
+              >
+                <span className="font-medium text-gray-900 text-sm">{item.q}</span>
+                <span
+                  className="text-gray-400 shrink-0 text-lg transition-transform duration-200"
+                  style={{ transform: open === i ? "rotate(45deg)" : "none" }}
+                >
+                  +
+                </span>
+              </button>
+              {open === i && (
+                <div className="px-6 pb-4">
+                  <p className="text-sm text-gray-500 leading-relaxed">{item.a}</p>
+                </div>
+              )}
+            </div>
           ))}
         </div>
       </div>

@@ -5,11 +5,10 @@ import HowItWorks from "@/components/HowItWorks";
 import UseCases from "@/components/UseCases";
 import Showroom from "@/components/Showroom";
 import Pricing from "@/components/Pricing";
-import Comparison from "@/components/Comparison";
-import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -22,12 +21,11 @@ export default function Home() {
         <UseCases />
         <Showroom />
         <Pricing />
-        <Comparison />
-        <Testimonials />
         <FAQ />
         <CTAFinal />
       </main>
       <Footer />
+      <WhatsAppButton />
     </>
   );
 }

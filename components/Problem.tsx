@@ -1,18 +1,18 @@
 const problems = [
   {
     icon: "📵",
-    title: "Clientes que no esperan",
-    body: "Si no respondes en minutos, se van con la competencia.",
+    title: "Mensajes sin responder",
+    body: "Cada mensaje que demora en responderse es un cliente que se va con la competencia. WhatsApp no espera.",
   },
   {
     icon: "🔁",
-    title: "Siempre las mismas preguntas",
-    body: "Horarios, precios, disponibilidad. Tu tiempo vale más.",
+    title: "Las mismas preguntas",
+    body: "Horarios, precios, disponibilidad. Respondes lo mismo 20 veces al día. Tu tiempo vale mucho más que eso.",
   },
   {
-    icon: "🌙",
-    title: "Cerrado fuera de horario",
-    body: "Tus clientes escriben a las 10pm. Sin respuesta, pierdes la venta.",
+    icon: "📅",
+    title: "Agenda caótica",
+    body: "Citas por WhatsApp, llamadas, anotaciones en papel. Sin un sistema claro, los errores y olvidos son inevitables.",
   },
 ];
 
@@ -24,7 +24,7 @@ export default function Problem() {
           ¿Te suena familiar?
         </h2>
         <p className="text-center text-gray-500 mb-12 text-sm">
-          Si alguna de estas situaciones te describe, Asistia es para ti.
+          Si alguna de estas situaciones te describe, AsistIA es para ti.
         </p>
 
         <div className="grid md:grid-cols-3 gap-6">

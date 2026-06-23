@@ -1,24 +1,23 @@
-const WA_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "56912345678";
+const DASHBOARD_URL =
+  process.env.NEXT_PUBLIC_DASHBOARD_URL ?? "https://panel.miasistia.cl";
+const WA_NUMBER = "56981748168";
 
 export default function CTAFinal() {
   return (
-    <section
-      className="py-24 px-4"
-      style={{ background: "linear-gradient(135deg, #059669 0%, #10b981 100%)" }}
-    >
-      <div className="max-w-3xl mx-auto text-center text-white">
-        <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-          ¿Listo para que tu negocio se atienda solo?
+    <section className="py-24 px-4 bg-white">
+      <div className="max-w-2xl mx-auto text-center">
+        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          Tu negocio merece atender mejor
         </h2>
-        <p className="text-emerald-100 text-lg mb-10 max-w-xl mx-auto">
-          Activa tu asistente hoy. Primer mes gratis, sin permanencia.
+        <p className="text-gray-500 mb-10 text-lg leading-relaxed">
+          Empieza gratis hoy. Sin tarjeta, sin técnicos, sin compromiso.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#precios"
-            className="px-8 py-3.5 bg-white rounded-xl font-semibold transition-colors hover:bg-emerald-50"
-            style={{ color: "#059669" }}
+            href={`${DASHBOARD_URL}/contratar`}
+            className="px-8 py-3.5 rounded-xl font-semibold text-white transition-opacity hover:opacity-90 shadow-sm"
+            style={{ backgroundColor: "#10b981" }}
           >
             Ver planes →
           </a>
@@ -26,9 +25,9 @@ export default function CTAFinal() {
             href={`https://wa.me/${WA_NUMBER}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-3.5 rounded-xl font-semibold text-white border-2 border-white/60 hover:border-white hover:bg-white/10 transition-all"
+            className="px-8 py-3.5 rounded-xl font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors"
           >
-            💬 Hablar por WhatsApp
+            💬 Hablar con AsistIA
           </a>
         </div>
       </div>

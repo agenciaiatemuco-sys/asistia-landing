@@ -3,7 +3,14 @@
 import { useState, useEffect } from "react";
 
 const DASHBOARD_URL =
-  process.env.NEXT_PUBLIC_DASHBOARD_URL ?? "https://panel.miasistia.cl/login";
+  process.env.NEXT_PUBLIC_DASHBOARD_URL ?? "https://panel.miasistia.cl";
+
+const NAV_LINKS = [
+  { label: "Cómo funciona", href: "#como-funciona" },
+  { label: "Demo",          href: "#showroom" },
+  { label: "Precios",       href: "#precios" },
+  { label: "FAQ",           href: "#faq" },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -29,24 +36,24 @@ export default function Navbar() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#como-funciona" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-            Cómo funciona
-          </a>
-          <a href="#precios" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-            Precios
-          </a>
-          <a href="#faq" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-            FAQ
-          </a>
+          {NAV_LINKS.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              {l.label}
+            </a>
+          ))}
         </div>
 
         <div className="flex items-center gap-3">
           <a
-            href={DASHBOARD_URL}
-            className="px-4 py-2 rounded-lg text-sm font-medium text-white transition-opacity hover:opacity-90"
+            href={`${DASHBOARD_URL}/contratar`}
+            className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
             style={{ backgroundColor: "#10b981" }}
           >
-            Empezar ahora
+            Empezar gratis →
           </a>
 
           {/* Mobile hamburger */}
@@ -65,15 +72,16 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden border-t border-gray-100 bg-white px-4 py-4 flex flex-col gap-4">
-          <a href="#como-funciona" className="text-sm text-gray-700 font-medium" onClick={() => setMenuOpen(false)}>
-            Cómo funciona
-          </a>
-          <a href="#precios" className="text-sm text-gray-700 font-medium" onClick={() => setMenuOpen(false)}>
-            Precios
-          </a>
-          <a href="#faq" className="text-sm text-gray-700 font-medium" onClick={() => setMenuOpen(false)}>
-            FAQ
-          </a>
+          {NAV_LINKS.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="text-sm text-gray-700 font-medium"
+              onClick={() => setMenuOpen(false)}
+            >
+              {l.label}
+            </a>
+          ))}
         </div>
       )}
     </nav>
