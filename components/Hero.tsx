@@ -26,7 +26,7 @@ export default function Hero() {
             🎉 14 días gratis — hasta 30/06 o primeros 10 cupos
           </span>
 
-          <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-5 leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-5 leading-tight">
             Tu negocio se atiende solo,{" "}
             <span className="gradient-text">las 24 horas</span>
           </h1>
@@ -39,11 +39,11 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-4 mb-8">
             <a
-              href={`${DASHBOARD_URL}/contratar`}
+              href="#planes"
               className="px-6 py-3 rounded-xl font-semibold text-white transition-opacity hover:opacity-90 shadow-sm"
               style={{ backgroundColor: "#10b981" }}
             >
-              Empezar gratis →
+              Ver planes →
             </a>
             <a
               href={`https://wa.me/${WA_NUMBER}`}

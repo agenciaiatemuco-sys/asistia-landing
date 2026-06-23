@@ -36,7 +36,7 @@ export default function Pricing() {
           <div className="bg-emerald-700 rounded-2xl p-7 border-2 border-emerald-500 flex flex-col shadow-xl shadow-emerald-900/20 lg:-translate-y-2">
             <div className="flex items-center justify-between mb-2">
               <div className="text-xs font-bold text-emerald-300 uppercase tracking-wider">Más popular</div>
-              <span className="bg-amber-400 text-amber-900 text-xs font-extrabold px-2.5 py-1 rounded-full">⭐ Recomendado</span>
+              <span className="text-[11px] font-bold text-white/80 border border-white/25 px-2 py-0.5 rounded-full">⭐ Top</span>
             </div>
             <h3 className="text-2xl font-extrabold text-white mb-1">Starter</h3>
             <div className="flex items-end gap-1 mb-3">
