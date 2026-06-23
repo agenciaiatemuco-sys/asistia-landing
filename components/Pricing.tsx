@@ -117,15 +117,22 @@ export default function Pricing() {
               }`}
             >
               {p.badge && (
-                <span
-                  className={`inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3 w-fit ${
-                    p.highlighted
-                      ? "bg-emerald-100 text-emerald-700"
-                      : "bg-amber-50 text-amber-700"
-                  }`}
-                >
-                  {p.badge}
-                </span>
+                p.highlighted ? (
+                  <span
+                    className="inline-block text-xs font-bold px-3 py-1 rounded-full mb-3 w-fit border"
+                    style={{
+                      backgroundColor: "#064e3b",
+                      color: "#a7f3d0",
+                      borderColor: "rgba(16,185,129,0.5)",
+                    }}
+                  >
+                    {p.badge}
+                  </span>
+                ) : (
+                  <span className="inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full mb-3 w-fit bg-amber-50 text-amber-700">
+                    {p.badge}
+                  </span>
+                )
               )}
 
               <h3 className="text-lg font-bold text-gray-900">{p.name}</h3>

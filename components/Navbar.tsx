@@ -49,6 +49,12 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <a
+            href="https://panel.miasistia.cl/login"
+            className="hidden sm:block text-sm font-semibold text-gray-600 hover:text-emerald-600 transition-colors"
+          >
+            Iniciar sesión
+          </a>
+          <a
             href={`${DASHBOARD_URL}/contratar`}
             className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
             style={{ backgroundColor: "#10b981" }}
