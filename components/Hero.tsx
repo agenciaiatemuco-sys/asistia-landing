@@ -55,6 +55,16 @@ export default function Hero() {
             </a>
           </div>
 
+          {/* Link al Showroom */}
+          <div className="mt-4 mb-6 text-center sm:text-left">
+            <span className="text-sm text-gray-500">
+              👀 ¿Quieres ver el bot en acción?{" "}
+              <a href="#showroom" className="text-green-600 font-medium hover:underline">
+                Prueba una demo interactiva gratis →
+              </a>
+            </span>
+          </div>
+
           {/* 4 checkmarks */}
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             {CHECKMARKS.map((c) => (
