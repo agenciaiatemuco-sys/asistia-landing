@@ -72,6 +72,20 @@ export default function Showroom() {
         <p className="text-center text-slate-500 text-xs mt-8">
           Al escribir se abrirá WhatsApp con el mensaje de inicio precargado.
         </p>
+
+        {/* Banner plantillas */}
+        <div className="mt-8 max-w-2xl mx-auto py-4 px-6 rounded-xl bg-green-50 border border-green-200 text-sm text-gray-600 text-center">
+          🗂️ Más de 60 plantillas base disponibles para distintos rubros.{" "}
+          ¿Quieres una personalizada para tu negocio?{" "}
+          <a
+            href={`https://wa.me/${WA_NUMBER}?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20las%20plantillas%20de%20AsistIA`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-700 font-medium hover:underline"
+          >
+            Pregúntale a AsistIA →
+          </a>
+        </div>
       </div>
     </section>
   );
