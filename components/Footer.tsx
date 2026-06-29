@@ -12,6 +12,9 @@ export default function Footer() {
 
         {/* Links */}
         <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
+          <a href="/terminos" className="hover:text-gray-700 transition-colors">
+            Términos
+          </a>
           <a href="/privacidad" className="hover:text-gray-700 transition-colors">
             Privacidad
           </a>
