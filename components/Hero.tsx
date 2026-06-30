@@ -4,7 +4,7 @@ const DASHBOARD_URL =
 
 const CHECKMARKS = [
   "Sin permanencia",
-  "14 días gratis",
+  "14 dias gratis",
   "Activo en 10 min",
   "Sin tarjeta al inicio",
 ];
@@ -23,7 +23,7 @@ export default function Hero() {
             className="inline-block px-3 py-1 text-xs font-semibold rounded-full mb-4"
             style={{ backgroundColor: "#fef3c7", color: "#92400e" }}
           >
-            🎉 14 días gratis — Oferta de lanzamiento
+            🎉 14 dias gratis — Oferta de lanzamiento
           </span>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-5 leading-tight">
@@ -33,8 +33,8 @@ export default function Hero() {
 
           <p className="text-lg text-gray-500 mb-8 leading-relaxed max-w-lg">
             AsistIA conecta tu WhatsApp con inteligencia artificial. Responde
-            consultas, agenda citas y atiende clientes automáticamente —
-            mientras tú te dedicas a lo que importa.
+            consultas, toma pedidos, agenda citas y atiende clientes
+            automaticamente — mientras tu te dedicas a lo que importa.
           </p>
 
           <div className="flex flex-wrap gap-4 mb-8">
@@ -58,7 +58,7 @@ export default function Hero() {
           {/* Link al Showroom */}
           <div className="mt-4 mb-6 text-center sm:text-left">
             <span className="text-sm text-gray-500">
-              👀 ¿Quieres ver el bot en acción?{" "}
+              👀 ¿Quieres ver el bot en accion?{" "}
               <a href="#showroom" className="text-green-600 font-medium hover:underline">
                 Prueba una demo interactiva gratis →
               </a>
@@ -76,7 +76,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* WhatsApp chat mockup — kinesiología */}
+        {/* WhatsApp chat mockup — pedido de agua */}
         <div className="flex justify-center lg:justify-end">
           <div
             className="animate-float w-72 rounded-3xl overflow-hidden shadow-2xl border border-black/5"
@@ -91,11 +91,11 @@ export default function Hero() {
                 className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0"
                 style={{ backgroundColor: "#10b981" }}
               >
-                K
+                A
               </div>
               <div>
-                <p className="text-white text-sm font-semibold leading-tight">Kinesiología Salud ✦</p>
-                <p className="text-xs" style={{ color: "#a7f3d0" }}>en línea</p>
+                <p className="text-white text-sm font-semibold leading-tight">Agua Pura Express ✦</p>
+                <p className="text-xs" style={{ color: "#a7f3d0" }}>en linea</p>
               </div>
             </div>
 
@@ -110,7 +110,7 @@ export default function Hero() {
                   className="max-w-[85%] px-3 py-2 rounded-lg rounded-tr-sm text-sm text-gray-800 shadow-sm"
                   style={{ backgroundColor: "#dcf8c6" }}
                 >
-                  Hola, me duele la espalda baja, ¿tienen hora para mañana?
+                  Hola, quiero pedir 2 bidones de agua para Av. Alemania 456
                   <span className="block text-right text-[10px] text-gray-400 mt-1">10:31 ✓✓</span>
                 </div>
               </div>
@@ -118,7 +118,7 @@ export default function Hero() {
               {/* Bot 1 */}
               <div className="flex justify-start bubble-appear bubble-2">
                 <div className="max-w-[85%] px-3 py-2 rounded-lg rounded-tl-sm text-sm text-gray-800 bg-white shadow-sm">
-                  ¡Hola! Soy Ana 😊 Con gusto te ayudo. ¿A qué hora te acomoda mañana?
+                  ¡Hola! Con gusto 😊 Son 2 bidones de 20L a Av. Alemania 456. ¿Para hoy o mañana?
                   <span className="block text-right text-[10px] text-gray-400 mt-1">10:31</span>
                 </div>
               </div>
@@ -129,7 +129,7 @@ export default function Hero() {
                   className="max-w-[85%] px-3 py-2 rounded-lg rounded-tr-sm text-sm text-gray-800 shadow-sm"
                   style={{ backgroundColor: "#dcf8c6" }}
                 >
-                  A las 11:00 me viene bien
+                  Para hoy en la tarde porfa
                   <span className="block text-right text-[10px] text-gray-400 mt-1">10:32 ✓✓</span>
                 </div>
               </div>
@@ -137,7 +137,7 @@ export default function Hero() {
               {/* Bot 2 */}
               <div className="flex justify-start bubble-appear bubble-4">
                 <div className="max-w-[85%] px-3 py-2 rounded-lg rounded-tl-sm text-sm text-gray-800 bg-white shadow-sm">
-                  ✅ Cita agendada para mañana a las 11:00. ¡Te esperamos, cuídate mucho! 😊
+                  ✅ Pedido registrado: 2 bidones para hoy entre 15:00 y 18:00. ¡Te avisamos cuando salga! 🚚
                   <span className="block text-right text-[10px] text-gray-400 mt-1">10:32</span>
                 </div>
               </div>

@@ -4,36 +4,36 @@ import { useState } from "react";
 
 const ITEMS = [
   {
-    q: "¿Necesito instalar algo en mi teléfono?",
-    a: "No. AsistIA se conecta a tu número de WhatsApp Business actual mediante un código QR. Nada que instalar, sin cambios de número.",
+    q: "¿Necesito instalar algo en mi telefono?",
+    a: "No. AsistIA se conecta a tu numero de WhatsApp Business actual mediante un codigo QR. Nada que instalar, sin cambios de numero.",
   },
   {
-    q: "¿Qué pasa cuando termina el período de prueba?",
-    a: "Al vencer los 14 días te avisamos por WhatsApp. Si no contratas, el bot queda pausado y tus datos se conservan por 30 días.",
+    q: "¿Que pasa cuando termina el periodo de prueba?",
+    a: "Al vencer los 14 dias te avisamos por WhatsApp. Si no contratas, el bot queda pausado y tus datos se conservan por 30 dias.",
   },
   {
     q: "¿Puedo cancelar cuando quiera?",
-    a: "Sí, sin penalidades ni permanencia mínima. Puedes cancelar desde tu panel en cualquier momento.",
+    a: "Si, sin penalidades ni permanencia minima. Puedes cancelar desde tu panel en cualquier momento.",
   },
   {
-    q: "¿El bot puede agendar citas en Google Calendar?",
-    a: "Sí. AsistIA se integra con tu Google Calendar y gestiona la disponibilidad en tiempo real para evitar doble booking.",
+    q: "¿Funciona para mi tipo de negocio?",
+    a: "Si. AsistIA funciona para reparto y delivery, comercios, panaderias, distribuidoras, servicios profesionales, salud, estetica y mas. El asistente se adapta al lenguaje y necesidades de cada rubro.",
+  },
+  {
+    q: "¿El bot puede tomar pedidos y agendar citas?",
+    a: "Si. AsistIA toma pedidos con direccion de entrega, agenda citas con Google Calendar, y gestiona la disponibilidad en tiempo real para evitar doble booking.",
   },
   {
     q: "¿Puedo personalizar las respuestas del asistente?",
-    a: "Sí. Desde el panel editas la personalidad, el tono de comunicación, el catálogo de servicios y las instrucciones específicas del bot.",
+    a: "Si. Desde el panel editas la personalidad, el tono de comunicacion, el catalogo de servicios y las instrucciones especificas del bot.",
   },
   {
-    q: "¿Qué pasa si el bot no sabe responder algo?",
-    a: "El bot escala automáticamente al equipo humano cuando detecta que la consulta supera su alcance o el cliente lo solicita.",
+    q: "¿Que pasa si el bot no sabe responder algo?",
+    a: "El bot escala automaticamente al equipo humano cuando detecta que la consulta supera su alcance o el cliente lo solicita.",
   },
   {
-    q: "¿Mis datos y los de mis clientes están seguros?",
-    a: "Sí. Usamos Supabase y Airtable con acceso cifrado. Los datos de tus clientes nunca se comparten con terceros.",
-  },
-  {
-    q: "¿Funciona para rubros fuera de salud?",
-    a: "Absolutamente. AsistIA está activo en clínicas, estudios jurídicos, centros de estética, e-commerce y más. El asistente se adapta a cualquier negocio.",
+    q: "¿Mis datos y los de mis clientes estan seguros?",
+    a: "Si. Usamos Supabase y Airtable con acceso cifrado. Los datos de tus clientes nunca se comparten con terceros.",
   },
 ];
 

@@ -2,40 +2,46 @@ const WA_NUMBER = "56981748168";
 
 const DEMOS = [
   {
+    tag: "demo-reparto",
+    emoji: "🚚",
+    title: "Reparto / Delivery",
+    desc: "Toma de pedidos, direccion de entrega, horarios de despacho y seguimiento.",
+  },
+  {
     tag: "demo-salud",
     emoji: "🏥",
-    title: "Clínica / Salud",
-    desc: "Agendamiento de horas médicas, respuestas sobre especialidades y horarios.",
-  },
-  {
-    tag: "demo-medico",
-    emoji: "👨‍⚕️",
-    title: "Médico independiente",
-    desc: "Consultas privadas, valor de la consulta y disponibilidad de agenda.",
-  },
-  {
-    tag: "demo-estetica",
-    emoji: "💅",
-    title: "Centro de estética",
-    desc: "Tratamientos faciales, corporales, precios y reservas.",
-  },
-  {
-    tag: "demo-legal",
-    emoji: "⚖️",
-    title: "Estudio jurídico",
-    desc: "Consulta de áreas de práctica, honorarios y primeras consultas.",
+    title: "Clinica / Salud",
+    desc: "Agendamiento de horas medicas, respuestas sobre especialidades y horarios.",
   },
   {
     tag: "demo-ecommerce",
     emoji: "🛍️",
-    title: "E-commerce",
-    desc: "Estado de pedidos, catálogo, métodos de pago y despacho.",
+    title: "Comercio / Tienda",
+    desc: "Catalogo de productos, estado de pedidos, metodos de pago y despacho.",
+  },
+  {
+    tag: "demo-estetica",
+    emoji: "💅",
+    title: "Centro de estetica",
+    desc: "Tratamientos faciales, corporales, precios y reservas.",
+  },
+  {
+    tag: "demo-medico",
+    emoji: "👨‍⚕️",
+    title: "Profesional independiente",
+    desc: "Consultas, valor del servicio y disponibilidad de agenda.",
   },
   {
     tag: "demo-odonto",
     emoji: "🦷",
-    title: "Dental / Odontología",
+    title: "Dental / Odontologia",
     desc: "Agendamiento de urgencias, procedimientos y aranceles.",
+  },
+  {
+    tag: "demo-legal",
+    emoji: "⚖️",
+    title: "Estudio juridico",
+    desc: "Consulta de areas de practica, honorarios y primeras consultas.",
   },
 ];
 
@@ -44,10 +50,10 @@ export default function Showroom() {
     <section id="showroom" className="py-20 px-4 bg-slate-900">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-white mb-3">
-          Pruébalo ahora mismo
+          Pruebalo ahora mismo
         </h2>
         <p className="text-center text-slate-400 mb-12 text-sm">
-          Escríbele a AsistIA por WhatsApp y experimenta la demo de tu rubro.
+          Escribele a AsistIA por WhatsApp y experimenta la demo de tu rubro.
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -70,12 +76,12 @@ export default function Showroom() {
         </div>
 
         <p className="text-center text-slate-500 text-xs mt-8">
-          Al escribir se abrirá WhatsApp con el mensaje de inicio precargado.
+          Al escribir se abrira WhatsApp con el mensaje de inicio precargado.
         </p>
 
         {/* Banner plantillas */}
         <div className="mt-8 max-w-2xl mx-auto py-4 px-6 rounded-xl bg-green-50 border border-green-200 text-sm text-gray-600 text-center">
-          🗂️ Más de 60 plantillas base disponibles para distintos rubros.{" "}
+          🗂️ Mas de 60 plantillas base disponibles para distintos rubros.{" "}
           ¿Quieres una personalizada para tu negocio?{" "}
           <a
             href={`https://wa.me/${WA_NUMBER}?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20las%20plantillas%20de%20AsistIA`}
@@ -83,7 +89,7 @@ export default function Showroom() {
             rel="noopener noreferrer"
             className="text-green-700 font-medium hover:underline"
           >
-            Pregúntale a AsistIA →
+            Preguntale a AsistIA →
           </a>
         </div>
       </div>

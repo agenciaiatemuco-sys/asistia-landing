@@ -2,17 +2,17 @@ const problems = [
   {
     icon: "📵",
     title: "Mensajes sin responder",
-    body: "Cada mensaje que demora en responderse es un cliente que se va con la competencia. WhatsApp no espera.",
+    body: "Cada mensaje que demora en responderse es un cliente o pedido que se pierde. WhatsApp no espera.",
   },
   {
     icon: "🔁",
     title: "Las mismas preguntas",
-    body: "Horarios, precios, disponibilidad. Respondes lo mismo 20 veces al día. Tu tiempo vale mucho más que eso.",
+    body: "Precios, disponibilidad, horarios, estado del pedido. Respondes lo mismo 20 veces al dia. Tu tiempo vale mucho mas que eso.",
   },
   {
-    icon: "📅",
-    title: "Agenda caótica",
-    body: "Citas por WhatsApp, llamadas, anotaciones en papel. Sin un sistema claro, los errores y olvidos son inevitables.",
+    icon: "📋",
+    title: "Todo mezclado, sin sistema",
+    body: "Pedidos, citas y consultas en el mismo chat. Sin un sistema claro, algo siempre se pierde o se olvida.",
   },
 ];
 

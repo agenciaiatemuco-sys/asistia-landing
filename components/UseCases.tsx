@@ -1,9 +1,12 @@
 const cases = [
-  { icon: "💆", label: "Centros médicos y estéticos" },
+  { icon: "🚚", label: "Reparto y delivery" },
   { icon: "🛍️", label: "Comercios y tiendas" },
-  { icon: "✂️", label: "Barberías y belleza" },
-  { icon: "🛒", label: "Ventas y catálogos" },
-  { icon: "🏋️", label: "Fitness y educación" },
+  { icon: "💆", label: "Salud y estetica" },
+  { icon: "🏪", label: "Almacenes y minimarkets" },
+  { icon: "🍞", label: "Panaderias y distribuidoras" },
+  { icon: "✂️", label: "Barberias y belleza" },
+  { icon: "🛒", label: "Ventas y catalogos" },
+  { icon: "🏋️", label: "Fitness y educacion" },
   { icon: "⚖️", label: "Servicios profesionales" },
 ];
 

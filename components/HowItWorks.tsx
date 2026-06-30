@@ -15,7 +15,7 @@ const steps = [
     n: "3",
     icon: "🚀",
     title: "Listo, a trabajar",
-    body: "Tu asistente responde, agenda citas y atiende clientes 24/7 desde ese momento.",
+    body: "Tu asistente responde consultas, toma pedidos y agenda citas 24/7 desde ese momento.",
   },
 ];
 

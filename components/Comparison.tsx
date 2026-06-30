@@ -49,7 +49,7 @@ export default function Comparison() {
               <tr style={{ backgroundColor: "#111827" }}>
                 <th className="py-4 px-6 text-left text-gray-400 font-medium w-1/3"></th>
                 <th className="py-4 px-6 text-center text-gray-300 font-medium">
-                  Recepcionista
+                  Empleado dedicado
                 </th>
                 <th className="py-4 px-6 text-center font-semibold" style={{ color: "#10b981" }}>
                   ✦ AsistIA Starter
