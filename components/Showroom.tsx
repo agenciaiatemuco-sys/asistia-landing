@@ -81,7 +81,7 @@ export default function Showroom() {
 
         {/* Banner plantillas */}
         <div className="mt-8 max-w-2xl mx-auto py-4 px-6 rounded-xl bg-green-50 border border-green-200 text-sm text-gray-600 text-center">
-          🗂️ Mas de 60 plantillas base disponibles para distintos rubros.{" "}
+          🗂️ Más de 80 plantillas base disponibles para distintos rubros.{" "}
           ¿Quieres una personalizada para tu negocio?{" "}
           <a
             href={`https://wa.me/${WA_NUMBER}?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20las%20plantillas%20de%20AsistIA`}

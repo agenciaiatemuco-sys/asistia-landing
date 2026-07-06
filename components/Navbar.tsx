@@ -52,7 +52,7 @@ export default function Navbar() {
             href="https://panel.miasistia.cl/login"
             className="hidden sm:block text-sm font-semibold text-gray-600 hover:text-emerald-600 transition-colors"
           >
-            Iniciar sesión
+            Entrar
           </a>
           <a
             href={`${DASHBOARD_URL}/contratar`}
@@ -88,6 +88,13 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
+          <a
+            href="https://panel.miasistia.cl/login"
+            className="text-sm font-semibold text-emerald-600"
+            onClick={() => setMenuOpen(false)}
+          >
+            Iniciar sesión
+          </a>
         </div>
       )}
     </nav>
