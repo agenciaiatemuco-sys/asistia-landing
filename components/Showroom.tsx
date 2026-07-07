@@ -1,3 +1,11 @@
+"use client";
+
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 const WA_NUMBER = "56981748168";
 
 const DEMOS = [
@@ -64,6 +72,13 @@ export default function Showroom() {
               target="_blank"
               rel="noopener noreferrer"
               className="demo-card block p-5 rounded-2xl border border-slate-700 bg-slate-800 transition-all cursor-pointer"
+              onClick={() => {
+                if (typeof window.fbq !== "undefined")
+                  window.fbq("track", "ViewContent", {
+                    content_name: d.tag,
+                    content_category: "demo",
+                  });
+              }}
             >
               <div className="text-3xl mb-3">{d.emoji}</div>
               <h3 className="font-semibold text-white mb-1">{d.title}</h3>

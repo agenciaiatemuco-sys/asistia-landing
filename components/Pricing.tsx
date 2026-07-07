@@ -1,3 +1,15 @@
+"use client";
+
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
+function trackLead() {
+  if (typeof window.fbq !== "undefined") window.fbq("track", "Lead");
+}
+
 export default function Pricing() {
   return (
     <section id="planes" className="py-20 bg-slate-50 border-t border-slate-100">
@@ -27,6 +39,7 @@ export default function Pricing() {
               <li className="flex items-center gap-2"><span className="text-emerald-500 font-bold">✓</span> Soporte por WhatsApp</li>
             </ul>
             <a href="https://panel.miasistia.cl/contratar?plan=micro"
+               onClick={trackLead}
                className="block w-full py-3 text-center bg-white border-2 border-emerald-600 text-emerald-700 font-bold rounded-xl hover:bg-emerald-50 transition text-sm">
               Comenzar gratis
             </a>
@@ -53,6 +66,7 @@ export default function Pricing() {
               <li className="flex items-center gap-2"><span className="text-emerald-300 font-bold">✓</span> Soporte por WhatsApp</li>
             </ul>
             <a href="https://panel.miasistia.cl/contratar?plan=starter"
+               onClick={trackLead}
                className="block w-full py-3 text-center bg-white text-emerald-700 font-bold rounded-xl hover:bg-emerald-50 transition text-sm">
               Comenzar gratis
             </a>
@@ -76,6 +90,7 @@ export default function Pricing() {
               <li className="flex items-center gap-2"><span className="text-emerald-500 font-bold">✓</span> Soporte prioritario</li>
             </ul>
             <a href="https://panel.miasistia.cl/contratar?plan=pro"
+               onClick={trackLead}
                className="block w-full py-3 text-center bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition text-sm">
               Contratar ahora
             </a>
@@ -99,6 +114,7 @@ export default function Pricing() {
               <li className="flex items-center gap-2"><span className="text-emerald-500 font-bold">✓</span> Soporte dedicado</li>
             </ul>
             <a href="https://panel.miasistia.cl/contratar?plan=business"
+               onClick={trackLead}
                className="block w-full py-3 text-center bg-slate-900 text-white font-bold rounded-xl hover:bg-slate-800 transition text-sm">
               Contratar ahora
             </a>
@@ -114,6 +130,7 @@ export default function Pricing() {
           </div>
           <a href="https://wa.me/56981748168?text=Hola%2C%20me%20interesa%20el%20Plan%20Enterprise"
              target="_blank"
+             onClick={trackLead}
              className="shrink-0 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-8 rounded-xl transition text-sm whitespace-nowrap">
             Solicitar reunion →
           </a>
