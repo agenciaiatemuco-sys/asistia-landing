@@ -1,6 +1,17 @@
+"use client";
+
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 const DASHBOARD_URL =
   process.env.NEXT_PUBLIC_DASHBOARD_URL ?? "https://panel.miasistia.cl";
-const WA_NUMBER = "56981748168";
+
+function trackLead() {
+  if (typeof window.fbq !== "undefined") window.fbq("track", "Lead");
+}
 
 export default function CTAFinal() {
   return (
@@ -16,20 +27,22 @@ export default function CTAFinal() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href={`${DASHBOARD_URL}/contratar`}
+            onClick={trackLead}
             className="px-8 py-3.5 rounded-xl font-semibold text-white transition-opacity hover:opacity-90 shadow-sm"
             style={{ backgroundColor: "#10b981" }}
           >
-            Ver planes →
+            Pruébalo 14 días gratis
           </a>
           <a
-            href={`https://wa.me/${WA_NUMBER}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#showroom"
             className="px-8 py-3.5 rounded-xl font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors"
           >
-            💬 Hablar con AsistIA
+            Ver demo en WhatsApp
           </a>
         </div>
+        <p className="text-xs text-gray-400 mt-4">
+          Sin tarjeta de crédito · Activo en 10 minutos
+        </p>
       </div>
     </section>
   );

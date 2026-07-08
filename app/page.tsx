@@ -4,6 +4,7 @@ import Problem from "@/components/Problem";
 import HowItWorks from "@/components/HowItWorks";
 import UseCases from "@/components/UseCases";
 import Showroom from "@/components/Showroom";
+import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import CTAFinal from "@/components/CTAFinal";
@@ -20,6 +21,7 @@ export default function Home() {
         <HowItWorks />
         <UseCases />
         <Showroom />
+        <Testimonials />
         <Pricing />
         <FAQ />
         <CTAFinal />

@@ -2,7 +2,7 @@ const rows = [
   {
     label: "Costo mensual",
     human: "$500.000–$700.000 CLP",
-    asistia: "$89.000 CLP",
+    asistia: "Desde $39.900 CLP",
   },
   {
     label: "Horario",
@@ -22,12 +22,12 @@ const rows = [
   {
     label: "Costo de inicio",
     human: "Contratación + capacitación",
-    asistia: "$100.000 CLP (único)",
+    asistia: "$0 — sin instalación",
   },
   {
     label: "Ahorro anual",
     human: "—",
-    asistia: "$4.932.000–$7.332.000 CLP",
+    asistia: "$5.500.000–$7.900.000 CLP",
     highlight: true,
   },
 ];
@@ -52,7 +52,7 @@ export default function Comparison() {
                   Empleado dedicado
                 </th>
                 <th className="py-4 px-6 text-center font-semibold" style={{ color: "#10b981" }}>
-                  ✦ AsistIA Starter
+                  ✦ AsistIA
                 </th>
               </tr>
             </thead>
@@ -60,7 +60,6 @@ export default function Comparison() {
               {rows.map((row) => (
                 <tr
                   key={row.label}
-                  className={row.highlight ? "" : ""}
                   style={row.highlight ? { backgroundColor: "#f0fdf4" } : {}}
                 >
                   <td className="py-3.5 px-6 font-medium text-gray-700">{row.label}</td>
@@ -78,8 +77,7 @@ export default function Comparison() {
         </div>
 
         <p className="text-center text-sm text-gray-500 mt-6">
-          El ahorro anual equivale a más de{" "}
-          <strong className="text-gray-700">4 años</strong> de suscripción al Plan Starter.
+          Comparación basada en el Plan Micro ($39.900/mes) vs. sueldo mínimo de un ejecutivo de atención.
         </p>
       </div>
     </section>

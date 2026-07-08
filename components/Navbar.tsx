@@ -2,13 +2,19 @@
 
 import { useState, useEffect } from "react";
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 const DASHBOARD_URL =
   process.env.NEXT_PUBLIC_DASHBOARD_URL ?? "https://panel.miasistia.cl";
 
 const NAV_LINKS = [
   { label: "Cómo funciona", href: "#como-funciona" },
   { label: "Demo",          href: "#showroom" },
-  { label: "Precios",       href: "#precios" },
+  { label: "Precios",       href: "#planes" },
   { label: "FAQ",           href: "#faq" },
 ];
 
@@ -56,6 +62,9 @@ export default function Navbar() {
           </a>
           <a
             href={`${DASHBOARD_URL}/contratar`}
+            onClick={() => {
+              if (typeof window.fbq !== "undefined") window.fbq("track", "Lead");
+            }}
             className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
             style={{ backgroundColor: "#10b981" }}
           >

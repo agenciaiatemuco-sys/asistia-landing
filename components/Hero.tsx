@@ -1,13 +1,13 @@
-const WA_NUMBER = "56981748168";
+"use client";
+
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 const DASHBOARD_URL =
   process.env.NEXT_PUBLIC_DASHBOARD_URL ?? "https://panel.miasistia.cl";
-
-const CHECKMARKS = [
-  "Sin permanencia",
-  "14 dias gratis",
-  "Activo en 10 min",
-  "Sin tarjeta al inicio",
-];
 
 export default function Hero() {
   return (
@@ -18,56 +18,42 @@ export default function Hero() {
       <div className="relative max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
         {/* Copy */}
         <div>
-          {/* Badge oferta */}
-          <span
-            className="inline-block px-3 py-1 text-xs font-semibold rounded-full mb-4"
-            style={{ backgroundColor: "#fef3c7", color: "#92400e" }}
-          >
-            🎉 14 dias gratis — Oferta de lanzamiento
-          </span>
-
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-5 leading-tight">
-            Tu negocio se atiende solo,{" "}
-            <span className="gradient-text">las 24 horas</span>
+            Tu WhatsApp contesta solo.{" "}
+            <span className="gradient-text">Tú, a lo tuyo.</span>
           </h1>
 
           <p className="text-lg text-gray-500 mb-8 leading-relaxed max-w-lg">
-            AsistIA conecta tu WhatsApp con inteligencia artificial. Responde
-            consultas, toma pedidos, agenda citas y atiende clientes
-            automaticamente — mientras tu te dedicas a lo que importa.
+            AsistIA responde precios, agenda citas y toma pedidos 24/7, con tu
+            mismo número. Sin instalaciones, sin cambiar nada.
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-8">
+          <div className="flex flex-wrap gap-4 mb-3">
             <a
-              href="#planes"
+              href={`${DASHBOARD_URL}/contratar`}
+              onClick={() => {
+                if (typeof window.fbq !== "undefined") window.fbq("track", "Lead");
+              }}
               className="px-6 py-3 rounded-xl font-semibold text-white transition-opacity hover:opacity-90 shadow-sm"
               style={{ backgroundColor: "#10b981" }}
             >
-              Ver planes →
+              Pruébalo 14 días gratis
             </a>
             <a
-              href={`https://wa.me/${WA_NUMBER}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#showroom"
               className="px-6 py-3 rounded-xl font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 transition-colors"
             >
-              💬 Hablar con AsistIA
+              Ver demo en WhatsApp
             </a>
           </div>
 
-          {/* Link al Showroom */}
-          <div className="mt-4 mb-6 text-center sm:text-left">
-            <span className="text-sm text-gray-500">
-              👀 ¿Quieres ver el bot en accion?{" "}
-              <a href="#showroom" className="text-green-600 font-medium hover:underline">
-                Prueba una demo interactiva gratis →
-              </a>
-            </span>
-          </div>
+          <p className="text-xs text-gray-400 mb-8">
+            Sin tarjeta de crédito · Activo en 10 minutos
+          </p>
 
-          {/* 4 checkmarks */}
+          {/* 3 checkmarks */}
           <div className="flex flex-wrap gap-x-6 gap-y-2">
-            {CHECKMARKS.map((c) => (
+            {["Sin permanencia", "Sin instalación", "Soporte incluido"].map((c) => (
               <span key={c} className="flex items-center gap-1.5 text-sm text-gray-500">
                 <span className="text-emerald-500 font-bold">✓</span>
                 {c}
