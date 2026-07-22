@@ -203,7 +203,7 @@ export default function PrivacidadPage() {
               de seguridad y protección de datos:
             </p>
             <div className="overflow-x-auto mb-4">
-              <table className="w-full text-sm border-collapse">
+              <table className="w-full min-w-[520px] text-sm border-collapse">
                 <thead>
                   <tr className="border-b border-white/20 text-left">
                     <th className="py-2 pr-4 text-white font-semibold">
