@@ -5,7 +5,7 @@ import { useState } from "react";
 const ITEMS = [
   {
     q: "¿Necesito instalar algo en mi telefono?",
-    a: "No. AsistIA se conecta a tu numero de WhatsApp Business actual mediante un codigo QR. Nada que instalar, sin cambios de numero.",
+    a: "No. Alkia se conecta a tu numero de WhatsApp Business actual mediante un codigo QR. Nada que instalar, sin cambios de numero.",
   },
   {
     q: "¿Que pasa cuando termina el periodo de prueba?",
@@ -17,11 +17,11 @@ const ITEMS = [
   },
   {
     q: "¿Funciona para mi tipo de negocio?",
-    a: "Si. AsistIA funciona para reparto y delivery, comercios, panaderias, distribuidoras, servicios profesionales, salud, estetica y mas. El asistente se adapta al lenguaje y necesidades de cada rubro.",
+    a: "Si. Alkia funciona para reparto y delivery, comercios, panaderias, distribuidoras, servicios profesionales, salud, estetica y mas. El asistente se adapta al lenguaje y necesidades de cada rubro.",
   },
   {
     q: "¿El bot puede tomar pedidos y agendar citas?",
-    a: "Si. AsistIA toma pedidos con direccion de entrega, agenda citas con Google Calendar, y gestiona la disponibilidad en tiempo real para evitar doble booking.",
+    a: "Si. Alkia toma pedidos con direccion de entrega, agenda citas con Google Calendar, y gestiona la disponibilidad en tiempo real para evitar doble booking.",
   },
   {
     q: "¿Puedo personalizar las respuestas del asistente?",

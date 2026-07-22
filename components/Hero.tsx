@@ -24,7 +24,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg text-gray-500 mb-8 leading-relaxed max-w-lg">
-            AsistIA responde precios, agenda citas y toma pedidos 24/7, con tu
+            Alkia responde precios, agenda citas y toma pedidos 24/7, con tu
             mismo número. Sin instalaciones, sin cambiar nada.
           </p>
 

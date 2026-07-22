@@ -24,7 +24,7 @@ export default function Problem() {
           El problema que resolvemos
         </h2>
         <p className="text-center text-gray-500 mb-12 text-sm">
-          Si alguna de estas situaciones te describe, AsistIA es para ti.
+          Si alguna de estas situaciones te describe, Alkia es para ti.
         </p>
 
         <div className="grid md:grid-cols-3 gap-6">
