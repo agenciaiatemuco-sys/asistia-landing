@@ -7,9 +7,9 @@ export const metadata: Metadata = {
     "Instrucciones para solicitar la eliminación de tus datos personales de la plataforma Alkia.",
 };
 
-// NOTA: este contenido es la versión operativa inicial. Cuando llegue el texto
-// final revisado por el abogado, reemplazar SOLO el contenido de <main> (un
-// commit de este archivo) manteniendo estructura, header y footer.
+// Contenido final (fuente: docs/ELIMINACION_DE_DATOS_ALKIA.md del repo
+// dashboard-saas). Ante una nueva versión legal, reemplazar el contenido de
+// <main> en un commit de este archivo.
 export default function EliminacionDeDatosPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#0f172a" }}>
@@ -27,7 +27,7 @@ export default function EliminacionDeDatosPage() {
 
       <main className="max-w-3xl mx-auto px-4 py-16">
         <h1 className="text-3xl font-bold text-white mb-2">
-          Eliminación de Datos
+          Eliminación de datos de usuario
         </h1>
         <p className="text-gray-400 text-sm mb-12">
           Última actualización: 22 de julio de 2026
@@ -35,44 +35,54 @@ export default function EliminacionDeDatosPage() {
 
         <div className="space-y-10 text-gray-300 leading-relaxed">
           <p>
-            En Alkia SpA (RUT 78.469.837-8), operadora de la plataforma Alkia,
-            respetamos tu derecho a solicitar la eliminación de tus datos
-            personales, en conformidad con la Ley N° 19.628 sobre protección de
-            la vida privada y la normativa aplicable en Chile.
+            Alkia SpA respeta tu derecho a decidir sobre tus datos personales.
+            En esta página te explicamos cómo solicitar la eliminación de los
+            datos asociados a tus conversaciones con asistentes virtuales
+            operados por Alkia.
           </p>
 
           <section>
             <h2 className="text-lg font-semibold text-white mb-3">
-              1. ¿Qué datos podemos eliminar?
+              ¿Qué datos podemos eliminar?
             </h2>
             <p className="mb-3">
-              Puedes solicitar la eliminación de los datos personales que Alkia
-              trate sobre ti, entre ellos:
+              Si conversaste por WhatsApp con el asistente virtual de un negocio
+              que utiliza la plataforma Alkia, podemos eliminar:
             </p>
-            <ul className="list-disc pl-6 space-y-2">
+            <ul className="list-disc pl-6 space-y-2 mb-4">
+              <li>El historial de tus conversaciones con ese asistente.</li>
               <li>
-                Tu número de WhatsApp y nombre de perfil, si interactuaste con
-                un asistente de WhatsApp operado por Alkia.
+                Tu número de teléfono y nombre de perfil asociados a esas
+                conversaciones.
               </li>
               <li>
-                El historial de conversaciones con dicho asistente.
+                Los datos que hayas entregado durante la conversación (por
+                ejemplo, nombre, dirección, correo electrónico, RUT).
               </li>
               <li>
-                Citas, reservas o pedidos registrados a través del asistente.
-              </li>
-              <li>
-                Si eres cliente de la plataforma: los datos de tu cuenta y de tu
-                negocio.
+                Los archivos multimedia que hayas enviado (estos, además, se
+                eliminan automáticamente a los 30 días).
               </li>
             </ul>
+            <p>
+              <strong className="text-white">Nota:</strong> los registros de
+              citas, reservas o pedidos ya gestionados pueden requerir
+              conservación por parte del negocio con el que contrataste (por
+              ejemplo, por razones contables o de atención médica). En esos
+              casos, coordinaremos la solicitud con el negocio responsable, que
+              es quien decide sobre esos registros.
+            </p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold text-white mb-3">
-              2. Cómo solicitar la eliminación
+              ¿Cómo solicito la eliminación?
             </h2>
             <p className="mb-3">
-              Envía un correo a{" "}
+              <strong className="text-white">
+                Opción 1 — Por correo electrónico (recomendada):
+              </strong>{" "}
+              Escribe a{" "}
               <a
                 href="mailto:soporte@alkia.cl"
                 className="underline underline-offset-2"
@@ -80,60 +90,68 @@ export default function EliminacionDeDatosPage() {
               >
                 soporte@alkia.cl
               </a>{" "}
-              con el asunto <strong className="text-white">&quot;Eliminación de datos&quot;</strong>,
-              indicando:
+              con el asunto “Eliminación de datos”, indicando:
             </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>El número de WhatsApp desde el cual interactuaste con el asistente.</li>
+            <ol className="list-decimal pl-6 space-y-2 mb-4">
               <li>
-                Si corresponde, el nombre del negocio con cuyo asistente
-                conversaste.
+                El número de teléfono de WhatsApp desde el cual conversaste.
               </li>
-            </ul>
-            <p className="mt-3">
-              Si interactuaste con el asistente a través de la plataforma de
-              WhatsApp (Meta), esta misma vía cubre la eliminación de los datos
-              asociados a esa interacción que estén en poder de Alkia.
+              <li>
+                El nombre del negocio con cuyo asistente conversaste (si lo
+                recuerdas).
+              </li>
+            </ol>
+            <p className="mb-3">
+              Para tu seguridad, podremos pedirte una verificación simple de que
+              eres el titular del número (por ejemplo, responder desde ese mismo
+              número o correo).
+            </p>
+            <p>
+              <strong className="text-white">
+                Opción 2 — Directamente con el negocio:
+              </strong>{" "}
+              También puedes pedir la eliminación directamente al negocio con el
+              que conversaste; Alkia ejecutará la eliminación siguiendo sus
+              instrucciones como responsable de esos datos.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold text-white mb-3">Plazos</h2>
+            <p>
+              Confirmaremos la recepción de tu solicitud dentro de 5 días
+              hábiles y completaremos la eliminación dentro de un máximo de 30
+              días corridos, salvo que exista una obligación legal de
+              conservación, en cuyo caso te lo informaremos.
             </p>
           </section>
 
           <section>
             <h2 className="text-lg font-semibold text-white mb-3">
-              3. Plazos y confirmación
-            </h2>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>
-                Confirmaremos la recepción de tu solicitud dentro de{" "}
-                <strong className="text-white">5 días hábiles</strong>.
-              </li>
-              <li>
-                La eliminación se completará dentro de{" "}
-                <strong className="text-white">30 días corridos</strong> desde
-                la verificación de tu identidad, y te enviaremos una
-                confirmación por la misma vía.
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
-              4. Excepciones
+              ¿Y los datos que guarda WhatsApp?
             </h2>
             <p>
-              Podremos conservar cierta información cuando exista una obligación
-              legal que lo exija (por ejemplo, registros tributarios o de
-              facturación) o para la defensa de reclamos, limitándola al mínimo
-              necesario y por el tiempo estrictamente requerido.
+              Alkia solo puede eliminar los datos almacenados en su plataforma.
+              Los mensajes que permanecen en tu propia aplicación de WhatsApp o
+              en los servidores de WhatsApp/Meta se rigen por la política de
+              privacidad de WhatsApp. Puedes gestionar esos datos directamente
+              en tu aplicación.
             </p>
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
-              5. Contacto
-            </h2>
+            <h2 className="text-lg font-semibold text-white mb-3">Contacto</h2>
             <p>
-              Ante cualquier duda sobre este procedimiento o sobre el
-              tratamiento de tus datos, escríbenos a{" "}
+              Para cualquier duda sobre este procedimiento o sobre el
+              tratamiento de tus datos, revisa nuestra{" "}
+              <Link
+                href="/privacidad"
+                className="underline underline-offset-2"
+                style={{ color: "#10b981" }}
+              >
+                Política de Privacidad
+              </Link>{" "}
+              o escríbenos a{" "}
               <a
                 href="mailto:soporte@alkia.cl"
                 className="underline underline-offset-2"
@@ -141,20 +159,12 @@ export default function EliminacionDeDatosPage() {
               >
                 soporte@alkia.cl
               </a>
-              . Más información en nuestra{" "}
-              <Link
-                href="/privacidad"
-                className="underline underline-offset-2"
-                style={{ color: "#10b981" }}
-              >
-                Política de Privacidad
-              </Link>
               .
             </p>
           </section>
 
           <p className="text-sm text-gray-500 pt-6 border-t border-white/10">
-            Alkia SpA (RUT 78.469.837-8) — Temuco, Chile
+            Alkia SpA · RUT 78.469.837-8 · Temuco, Chile
           </p>
         </div>
       </main>
