@@ -113,7 +113,7 @@ export default function Showroom() {
           Pruebalo ahora mismo
         </h2>
         <p className="text-center text-slate-400 mb-12 text-sm">
-          Escribele a AsistIA por WhatsApp y experimenta la demo de tu rubro.
+          Escribele a Alkia por WhatsApp y experimenta la demo de tu rubro.
         </p>
 
         <div className="space-y-10">
@@ -160,12 +160,12 @@ export default function Showroom() {
           🗂️ Más de 80 plantillas base disponibles para distintos rubros.{" "}
           ¿Quieres una personalizada para tu negocio?{" "}
           <a
-            href={`https://wa.me/${WA_NUMBER}?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20las%20plantillas%20de%20AsistIA`}
+            href={`https://wa.me/${WA_NUMBER}?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20las%20plantillas%20de%20Alkia`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-700 font-medium hover:underline"
           >
-            Preguntale a AsistIA →
+            Preguntale a Alkia →
           </a>
         </div>
       </div>

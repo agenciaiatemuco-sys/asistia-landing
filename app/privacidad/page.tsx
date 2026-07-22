@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad — AsistIA",
+  title: "Política de Privacidad — Alkia",
   description:
-    "Conoce cómo AsistIA recopila, usa y protege la información de tus clientes y la tuya.",
+    "Conoce cómo Alkia recopila, usa y protege la información de tus clientes y la tuya.",
 };
 
 export default function PrivacidadPage() {
@@ -17,7 +17,7 @@ export default function PrivacidadPage() {
             className="text-xl font-bold"
             style={{ color: "#10b981" }}
           >
-            ✦ AsistIA
+            ✦ Alkia
           </Link>
         </div>
       </header>
@@ -27,12 +27,12 @@ export default function PrivacidadPage() {
           Política de Privacidad
         </h1>
         <p className="text-gray-400 text-sm mb-12">
-          Última actualización: 29 de junio de 2026
+          Última actualización: 22 de julio de 2026
         </p>
 
         <div className="space-y-10 text-gray-300 leading-relaxed">
           <p>
-            MiAsistIA SpA (en constitución), operadora de la plataforma AsistIA
+            Alkia SpA (RUT 78.469.837-8), operadora de la plataforma Alkia
             con domicilio en Temuco, Chile, se compromete a proteger la
             privacidad de sus clientes y usuarios finales, en cumplimiento
             de la Ley N° 19.628 sobre protección de la vida privada y demás
@@ -44,16 +44,16 @@ export default function PrivacidadPage() {
               1. ¿Quién es responsable del tratamiento?
             </h2>
             <p>
-              <strong className="text-white">Responsable:</strong> MiAsistIA SpA (en constitución)
+              <strong className="text-white">Responsable:</strong> Alkia SpA (RUT 78.469.837-8)
               <br />
               <strong className="text-white">Contacto:</strong>{" "}
-              <a href="mailto:soporte@miasistia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
-                soporte@miasistia.cl
+              <a href="mailto:soporte@alkia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
+                soporte@alkia.cl
               </a>
               <br />
               <strong className="text-white">Web:</strong>{" "}
-              <a href="https://www.miasistia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
-                www.miasistia.cl
+              <a href="https://alkia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
+                alkia.cl
               </a>
               <br />
               <strong className="text-white">Domicilio:</strong> Temuco, Región de La Araucanía, Chile
@@ -66,7 +66,7 @@ export default function PrivacidadPage() {
             </h2>
 
             <h3 className="text-sm font-semibold text-white mt-4 mb-2">
-              2.1 Datos de clientes del SaaS (negocios que contratan AsistIA)
+              2.1 Datos de clientes del SaaS (negocios que contratan Alkia)
             </h3>
             <ul className="list-disc list-inside space-y-2 pl-2">
               <li>Nombre, email y teléfono de contacto del negocio.</li>
@@ -79,7 +79,7 @@ export default function PrivacidadPage() {
               2.2 Datos de usuarios finales del bot (clientes de nuestros clientes)
             </h3>
             <p className="mb-2">
-              Cuando un usuario final interactúa con un bot de WhatsApp powered by AsistIA, podemos procesar:
+              Cuando un usuario final interactúa con un bot de WhatsApp powered by Alkia, podemos procesar:
             </p>
             <ul className="list-disc list-inside space-y-2 pl-2">
               <li>Número de teléfono de WhatsApp.</li>
@@ -88,9 +88,9 @@ export default function PrivacidadPage() {
               <li>Email y datos de agenda cuando son proporcionados voluntariamente para agendar una cita.</li>
             </ul>
             <p className="mt-3">
-              AsistIA actúa como <strong className="text-white">encargado de tratamiento</strong> respecto
+              Alkia actúa como <strong className="text-white">encargado de tratamiento</strong> respecto
               a los datos de los usuarios finales. El <strong className="text-white">responsable</strong> es
-              el negocio (cliente de AsistIA) que opera el bot.
+              el negocio (cliente de Alkia) que opera el bot.
             </p>
 
             <h3 className="text-sm font-semibold text-white mt-4 mb-2">
@@ -133,7 +133,7 @@ export default function PrivacidadPage() {
               4. ¿Con quién compartimos los datos?
             </h2>
             <p className="mb-3">
-              AsistIA puede compartir datos con los siguientes proveedores de servicios,
+              Alkia puede compartir datos con los siguientes proveedores de servicios,
               únicamente en la medida necesaria para operar la plataforma:
             </p>
             <div className="overflow-x-auto">
@@ -184,15 +184,15 @@ export default function PrivacidadPage() {
               De conformidad con la Ley N° 19.628, usted tiene derecho a:
             </p>
             <ul className="list-disc list-inside space-y-2 pl-2">
-              <li><strong className="text-white">Acceder</strong> a sus datos personales que AsistIA trate.</li>
+              <li><strong className="text-white">Acceder</strong> a sus datos personales que Alkia trate.</li>
               <li><strong className="text-white">Rectificar</strong> datos incorrectos o desactualizados.</li>
               <li><strong className="text-white">Cancelar</strong> (eliminar) sus datos cuando ya no sean necesarios.</li>
               <li><strong className="text-white">Oponerse</strong> al tratamiento de sus datos en determinadas circunstancias.</li>
             </ul>
             <p className="mt-3">
               Para ejercer estos derechos, envíe un email a{" "}
-              <a href="mailto:soporte@miasistia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
-                soporte@miasistia.cl
+              <a href="mailto:soporte@alkia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
+                soporte@alkia.cl
               </a>{" "}
               con asunto &quot;Derechos ARCO&quot; indicando su nombre y la solicitud.
               Responderemos en un plazo máximo de 15 días hábiles.
@@ -204,7 +204,7 @@ export default function PrivacidadPage() {
               7. Seguridad de los datos
             </h2>
             <p className="mb-3">
-              AsistIA implementa medidas técnicas y organizativas para proteger los datos, incluyendo:
+              Alkia implementa medidas técnicas y organizativas para proteger los datos, incluyendo:
             </p>
             <ul className="list-disc list-inside space-y-2 pl-2">
               <li>Transmisión cifrada mediante HTTPS/TLS.</li>
@@ -235,7 +235,7 @@ export default function PrivacidadPage() {
             </h2>
             <p>
               Algunos de nuestros proveedores operan fuera de Chile (principalmente en Estados Unidos).
-              Al usar AsistIA, usted acepta que sus datos puedan ser transferidos y procesados en
+              Al usar Alkia, usted acepta que sus datos puedan ser transferidos y procesados en
               dichos países, los cuales pueden tener normativas de protección de datos distintas a las chilenas.
             </p>
           </section>
@@ -259,8 +259,8 @@ export default function PrivacidadPage() {
             </p>
             <p className="mt-2">
               <strong className="text-white">Email:</strong>{" "}
-              <a href="mailto:soporte@miasistia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
-                soporte@miasistia.cl
+              <a href="mailto:soporte@alkia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
+                soporte@alkia.cl
               </a>
               <br />
               <strong className="text-white">Asunto sugerido:</strong> &quot;Privacidad&quot; o &quot;Derechos ARCO&quot;
@@ -268,7 +268,7 @@ export default function PrivacidadPage() {
           </section>
 
           <p className="text-sm text-gray-500 mt-8">
-            MiAsistIA SpA (en constitución) — Temuco, Chile
+            Alkia SpA (RUT 78.469.837-8) — Temuco, Chile
           </p>
         </div>
 
@@ -285,7 +285,7 @@ export default function PrivacidadPage() {
 
       <footer className="py-8 px-4 border-t border-white/10 text-center">
         <p className="text-gray-500 text-xs">
-          © {new Date().getFullYear()} AsistIA. Todos los derechos reservados.
+          © {new Date().getFullYear()} Alkia. Todos los derechos reservados.
         </p>
       </footer>
     </div>

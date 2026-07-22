@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Términos de Servicio — AsistIA",
+  title: "Términos de Servicio — Alkia",
   description:
-    "Términos y condiciones de uso de la plataforma AsistIA para asistentes de WhatsApp con IA.",
+    "Términos y condiciones de uso de la plataforma Alkia para asistentes de WhatsApp con IA.",
 };
 
 export default function TerminosPage() {
@@ -17,7 +17,7 @@ export default function TerminosPage() {
             className="text-xl font-bold"
             style={{ color: "#10b981" }}
           >
-            ✦ AsistIA
+            ✦ Alkia
           </Link>
         </div>
       </header>
@@ -27,14 +27,14 @@ export default function TerminosPage() {
           Términos de Servicio
         </h1>
         <p className="text-gray-400 text-sm mb-12">
-          Última actualización: 29 de junio de 2026
+          Última actualización: 22 de julio de 2026
         </p>
 
         <div className="space-y-10 text-gray-300 leading-relaxed">
           <p>
             Estos Términos de Servicio (&quot;Términos&quot;) regulan el acceso y uso de la
-            plataforma AsistIA, operada por MiAsistIA SpA (en constitución), con domicilio
-            en Temuco, Región de La Araucanía, Chile (en adelante &quot;AsistIA&quot;,
+            plataforma Alkia, operada por Alkia SpA (RUT 78.469.837-8), con domicilio
+            en Temuco, Región de La Araucanía, Chile (en adelante &quot;Alkia&quot;,
             &quot;nosotros&quot; o &quot;la empresa&quot;).
           </p>
           <p>
@@ -48,7 +48,7 @@ export default function TerminosPage() {
               1. Descripción del servicio
             </h2>
             <p className="mb-3">
-              AsistIA es una plataforma SaaS (Software como Servicio) que provee asistentes de
+              Alkia es una plataforma SaaS (Software como Servicio) que provee asistentes de
               inteligencia artificial para WhatsApp, incluyendo:
             </p>
             <ul className="list-disc list-inside space-y-2 pl-2">
@@ -71,10 +71,10 @@ export default function TerminosPage() {
 
             <h3 className="text-sm font-semibold text-white mt-4 mb-2">2.1 Planes disponibles</h3>
             <p>
-              AsistIA ofrece planes de suscripción mensual con distintos límites de interacciones
+              Alkia ofrece planes de suscripción mensual con distintos límites de interacciones
               y colaboradores. Los precios vigentes se publican en{" "}
-              <a href="https://www.miasistia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
-                www.miasistia.cl
+              <a href="https://alkia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
+                alkia.cl
               </a>.
             </p>
 
@@ -88,14 +88,14 @@ export default function TerminosPage() {
             <h3 className="text-sm font-semibold text-white mt-4 mb-2">2.3 Facturación</h3>
             <p>
               El cobro se realiza mensualmente. Los precios están expresados en pesos chilenos (CLP)
-              e incluyen IVA cuando corresponda. AsistIA se reserva el derecho de modificar los
+              e incluyen IVA cuando corresponda. Alkia se reserva el derecho de modificar los
               precios con un aviso previo de 30 días.
             </p>
 
             <h3 className="text-sm font-semibold text-white mt-4 mb-2">2.4 Reembolsos</h3>
             <p>
               No se realizan reembolsos por períodos parciales ya facturados. En caso de fallas graves
-              atribuibles a AsistIA, se evaluarán compensaciones caso a caso.
+              atribuibles a Alkia, se evaluarán compensaciones caso a caso.
             </p>
           </section>
 
@@ -116,9 +116,9 @@ export default function TerminosPage() {
 
           <section>
             <h2 className="text-lg font-semibold text-white mb-3">
-              4. Obligaciones de AsistIA
+              4. Obligaciones de Alkia
             </h2>
-            <p className="mb-3">AsistIA se compromete a:</p>
+            <p className="mb-3">Alkia se compromete a:</p>
             <ul className="list-disc list-inside space-y-2 pl-2">
               <li>Mantener el servicio disponible con un objetivo de uptime del 99% mensual, excluyendo mantenimientos programados.</li>
               <li>Notificar al Cliente con al menos 24 horas de anticipación ante mantenimientos que afecten la disponibilidad.</li>
@@ -131,7 +131,7 @@ export default function TerminosPage() {
             <h2 className="text-lg font-semibold text-white mb-3">
               5. Limitación de responsabilidad
             </h2>
-            <p className="mb-3">AsistIA no será responsable por:</p>
+            <p className="mb-3">Alkia no será responsable por:</p>
             <ul className="list-disc list-inside space-y-2 pl-2">
               <li>Interrupciones del servicio de WhatsApp (Meta Platforms) ajenas a su control.</li>
               <li>Respuestas del bot que el Cliente considere inadecuadas para su negocio y que no hayan sido configuradas correctamente.</li>
@@ -139,7 +139,7 @@ export default function TerminosPage() {
               <li>Fallos en servicios de terceros integrados (Google Calendar, pasarelas de pago, proveedores de infraestructura).</li>
             </ul>
             <p className="mt-3">
-              La responsabilidad máxima de AsistIA frente al Cliente, en cualquier caso, no excederá
+              La responsabilidad máxima de Alkia frente al Cliente, en cualquier caso, no excederá
               el monto pagado en los últimos 3 meses de servicio.
             </p>
           </section>
@@ -149,13 +149,13 @@ export default function TerminosPage() {
               6. Propiedad intelectual
             </h2>
             <p>
-              AsistIA y todos sus componentes (software, diseño, marca, documentación) son propiedad
-              de MiAsistIA SpA. El Cliente recibe una licencia de uso no exclusiva, intransferible
+              Alkia y todos sus componentes (software, diseño, marca, documentación) son propiedad
+              de Alkia SpA. El Cliente recibe una licencia de uso no exclusiva, intransferible
               y revocable para usar el servicio durante la vigencia de su suscripción.
             </p>
             <p className="mt-3">
               Los datos, conversaciones y configuraciones generadas por el Cliente son de su propiedad.
-              AsistIA puede usarlos de forma anonimizada para mejorar el servicio.
+              Alkia puede usarlos de forma anonimizada para mejorar el servicio.
             </p>
           </section>
 
@@ -170,9 +170,9 @@ export default function TerminosPage() {
               efectiva al final del período facturado.
             </p>
 
-            <h3 className="text-sm font-semibold text-white mt-4 mb-2">7.2 Por parte de AsistIA</h3>
+            <h3 className="text-sm font-semibold text-white mt-4 mb-2">7.2 Por parte de Alkia</h3>
             <p className="mb-2">
-              AsistIA puede suspender o terminar el acceso del Cliente en caso de:
+              Alkia puede suspender o terminar el acceso del Cliente en caso de:
             </p>
             <ul className="list-disc list-inside space-y-2 pl-2">
               <li>Incumplimiento de estos Términos.</li>
@@ -180,7 +180,7 @@ export default function TerminosPage() {
               <li>Uso del servicio para actividades ilegales o dañinas.</li>
             </ul>
             <p className="mt-3">
-              En caso de término injustificado por parte de AsistIA, se reembolsará el proporcional
+              En caso de término injustificado por parte de Alkia, se reembolsará el proporcional
               del período no utilizado.
             </p>
 
@@ -196,7 +196,7 @@ export default function TerminosPage() {
               8. Modificaciones a los Términos
             </h2>
             <p>
-              AsistIA puede modificar estos Términos en cualquier momento, notificando al Cliente
+              Alkia puede modificar estos Términos en cualquier momento, notificando al Cliente
               por email con al menos 15 días de anticipación. El uso continuado del servicio tras
               la fecha efectiva implica aceptación de los nuevos Términos.
             </p>
@@ -220,19 +220,19 @@ export default function TerminosPage() {
             <p>Para consultas sobre estos Términos:</p>
             <p className="mt-2">
               <strong className="text-white">Email:</strong>{" "}
-              <a href="mailto:soporte@miasistia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
-                soporte@miasistia.cl
+              <a href="mailto:soporte@alkia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
+                soporte@alkia.cl
               </a>
               <br />
               <strong className="text-white">Web:</strong>{" "}
-              <a href="https://www.miasistia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
-                www.miasistia.cl
+              <a href="https://alkia.cl" className="underline underline-offset-2" style={{ color: "#10b981" }}>
+                alkia.cl
               </a>
             </p>
           </section>
 
           <p className="text-sm text-gray-500 mt-8">
-            MiAsistIA SpA (en constitución) — Temuco, Chile
+            Alkia SpA (RUT 78.469.837-8) — Temuco, Chile
           </p>
         </div>
 
@@ -249,7 +249,7 @@ export default function TerminosPage() {
 
       <footer className="py-8 px-4 border-t border-white/10 text-center">
         <p className="text-gray-500 text-xs">
-          © {new Date().getFullYear()} AsistIA. Todos los derechos reservados.
+          © {new Date().getFullYear()} Alkia. Todos los derechos reservados.
         </p>
       </footer>
     </div>

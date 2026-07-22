@@ -18,7 +18,7 @@ export default function UseCases() {
           Funciona para tu tipo de negocio
         </h2>
         <p className="text-center text-gray-500 mb-12 text-sm">
-          AsistIA se adapta al lenguaje y necesidades de cada rubro
+          Alkia se adapta al lenguaje y necesidades de cada rubro
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
