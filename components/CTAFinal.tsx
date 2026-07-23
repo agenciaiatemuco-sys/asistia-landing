@@ -29,7 +29,7 @@ export default function CTAFinal() {
             href={`${DASHBOARD_URL}/contratar`}
             onClick={trackLead}
             className="px-8 py-3.5 rounded-xl font-semibold text-white transition-opacity hover:opacity-90 shadow-sm"
-            style={{ backgroundColor: "#10b981" }}
+            style={{ backgroundColor: "#0d9373" }}
           >
             Pruébalo 14 días gratis
           </a>

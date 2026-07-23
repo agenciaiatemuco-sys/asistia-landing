@@ -51,7 +51,7 @@ export default function Comparison() {
                 <th className="py-4 px-6 text-center text-gray-300 font-medium">
                   Empleado dedicado
                 </th>
-                <th className="py-4 px-6 text-center font-semibold" style={{ color: "#10b981" }}>
+                <th className="py-4 px-6 text-center font-semibold" style={{ color: "#0d9373" }}>
                   ✦ Alkia
                 </th>
               </tr>
@@ -66,7 +66,7 @@ export default function Comparison() {
                   <td className="py-3.5 px-6 text-center text-gray-500">{row.human}</td>
                   <td
                     className="py-3.5 px-6 text-center font-semibold"
-                    style={{ color: row.highlight ? "#059669" : "#10b981" }}
+                    style={{ color: row.highlight ? "#0b7d62" : "#0d9373" }}
                   >
                     {row.alkia}
                   </td>

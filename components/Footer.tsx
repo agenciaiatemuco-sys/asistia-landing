@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="py-12 px-4 border-t border-gray-100 bg-white">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Logo */}
-        <span className="text-lg font-bold" style={{ color: "#10b981" }}>
+        <span className="text-lg font-bold" style={{ color: "#0d9373" }}>
           ✦ Alkia
         </span>
 

@@ -35,7 +35,7 @@ export default function Hero() {
                 if (typeof window.fbq !== "undefined") window.fbq("track", "Lead");
               }}
               className="px-6 py-3 rounded-xl font-semibold text-white transition-opacity hover:opacity-90 shadow-sm"
-              style={{ backgroundColor: "#10b981" }}
+              style={{ backgroundColor: "#0d9373" }}
             >
               Pruébalo 14 días gratis
             </a>
@@ -75,7 +75,7 @@ export default function Hero() {
             >
               <div
                 className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0"
-                style={{ backgroundColor: "#10b981" }}
+                style={{ backgroundColor: "#0d9373" }}
               >
                 A
               </div>

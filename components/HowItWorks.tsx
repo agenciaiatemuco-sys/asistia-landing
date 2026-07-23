@@ -36,7 +36,7 @@ export default function HowItWorks() {
           <div
             className="absolute top-6 left-[calc(16.67%+28px)] right-[calc(16.67%+28px)] h-0.5"
             style={{
-              background: "linear-gradient(to right, #10b981, #059669)",
+              background: "linear-gradient(to right, #0d9373, #0b7d62)",
               opacity: 0.4,
             }}
           />
@@ -45,13 +45,13 @@ export default function HowItWorks() {
             <div key={s.n} className="flex flex-col items-center text-center px-8 relative">
               <div
                 className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5 relative z-10 shadow-md"
-                style={{ backgroundColor: "#ecfdf5", border: "2px solid #10b981" }}
+                style={{ backgroundColor: "#ecfdf5", border: "2px solid #0d9373" }}
               >
                 {s.icon}
               </div>
               <span
                 className="text-xs font-bold mb-1"
-                style={{ color: "#10b981" }}
+                style={{ color: "#0d9373" }}
               >
                 Paso {s.n}
               </span>
@@ -66,7 +66,7 @@ export default function HowItWorks() {
           <div
             className="absolute left-6 top-6 bottom-6 w-0.5"
             style={{
-              background: "linear-gradient(to bottom, #10b981, #059669)",
+              background: "linear-gradient(to bottom, #0d9373, #0b7d62)",
               opacity: 0.4,
             }}
           />
@@ -74,12 +74,12 @@ export default function HowItWorks() {
             <div key={s.n} className="flex gap-5 relative">
               <div
                 className="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center text-xl z-10 shadow-sm"
-                style={{ backgroundColor: "#ecfdf5", border: "2px solid #10b981" }}
+                style={{ backgroundColor: "#ecfdf5", border: "2px solid #0d9373" }}
               >
                 {s.icon}
               </div>
               <div className="pt-1">
-                <span className="text-xs font-bold block mb-0.5" style={{ color: "#10b981" }}>
+                <span className="text-xs font-bold block mb-0.5" style={{ color: "#0d9373" }}>
                   Paso {s.n}
                 </span>
                 <h3 className="font-semibold text-gray-900 mb-1">{s.title}</h3>

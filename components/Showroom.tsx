@@ -141,7 +141,7 @@ export default function Showroom() {
                     <div className="text-3xl mb-3">{d.emoji}</div>
                     <h4 className="font-semibold text-white mb-1">{d.title}</h4>
                     <p className="text-slate-400 text-sm leading-relaxed">{d.desc}</p>
-                    <p className="mt-3 text-xs font-medium" style={{ color: "#10b981" }}>
+                    <p className="mt-3 text-xs font-medium" style={{ color: "#0d9373" }}>
                       Probar demo →
                     </p>
                   </a>

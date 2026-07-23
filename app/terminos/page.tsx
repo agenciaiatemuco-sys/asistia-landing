@@ -18,7 +18,7 @@ export default function TerminosPage() {
           <Link
             href="/"
             className="text-xl font-bold"
-            style={{ color: "#10b981" }}
+            style={{ color: "#0d9373" }}
           >
             ✦ Alkia
           </Link>
@@ -51,7 +51,7 @@ export default function TerminosPage() {
               <a
                 href="mailto:soporte@alkia.cl"
                 className="underline underline-offset-2"
-                style={{ color: "#10b981" }}
+                style={{ color: "#0d9373" }}
               >
                 soporte@alkia.cl
               </a>
@@ -203,7 +203,7 @@ export default function TerminosPage() {
               <Link
                 href="/privacidad"
                 className="underline underline-offset-2"
-                style={{ color: "#10b981" }}
+                style={{ color: "#0d9373" }}
               >
                 Política de Privacidad
               </Link>{" "}
@@ -321,7 +321,7 @@ export default function TerminosPage() {
             <a
               href="mailto:soporte@alkia.cl"
               className="underline underline-offset-2"
-              style={{ color: "#10b981" }}
+              style={{ color: "#0d9373" }}
             >
               soporte@alkia.cl
             </a>
