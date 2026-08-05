@@ -1,5 +1,17 @@
 "use client";
 
+import {
+  Truck,
+  Stethoscope,
+  Smile,
+  ScanLine,
+  Sparkles,
+  Scale,
+  ShoppingBag,
+  Package,
+  UtensilsCrossed,
+  Building2,
+} from "lucide-react";
 import { waLink } from "@/lib/links";
 
 declare global {
@@ -18,7 +30,7 @@ const GROUPS = [
     demos: [
       {
         tag: "demo-despachos",
-        emoji: "🚚",
+        icon: Truck,
         title: "Reparto / Delivery",
         desc: "Toma de pedidos, direccion de entrega, horarios de despacho y seguimiento.",
       },
@@ -29,19 +41,19 @@ const GROUPS = [
     demos: [
       {
         tag: "demo-medico",
-        emoji: "👨‍⚕️",
+        icon: Stethoscope,
         title: "Consulta medica",
         desc: "Agendamiento de horas, especialidades, valores y disponibilidad de agenda.",
       },
       {
         tag: "demo-odonto",
-        emoji: "🦷",
+        icon: Smile,
         title: "Dental / Odontologia",
         desc: "Agendamiento de urgencias, procedimientos y aranceles.",
       },
       {
         tag: "demo-salud",
-        emoji: "🏥",
+        icon: ScanLine,
         title: "Centro de imagenes",
         desc: "Examenes, preparacion, ordenes medicas y agendamiento de horas.",
       },
@@ -52,7 +64,7 @@ const GROUPS = [
     demos: [
       {
         tag: "demo-estetica",
-        emoji: "💅",
+        icon: Sparkles,
         title: "Centro de estetica",
         desc: "Tratamientos faciales, corporales, precios y reservas.",
       },
@@ -63,7 +75,7 @@ const GROUPS = [
     demos: [
       {
         tag: "demo-legal",
-        emoji: "⚖️",
+        icon: Scale,
         title: "Estudio juridico",
         desc: "Consulta de areas de practica, honorarios y primeras consultas.",
       },
@@ -74,13 +86,13 @@ const GROUPS = [
     demos: [
       {
         tag: "demo-ecommerce",
-        emoji: "🛍️",
+        icon: ShoppingBag,
         title: "Tienda online",
         desc: "Catalogo de productos, estado de pedidos, metodos de pago y despacho.",
       },
       {
         tag: "demo-stock",
-        emoji: "📦",
+        icon: Package,
         title: "Tienda con stock",
         desc: "Consulta de disponibilidad de productos, precios y reservas.",
       },
@@ -91,13 +103,13 @@ const GROUPS = [
     demos: [
       {
         tag: "demo-restaurant",
-        emoji: "🍽️",
+        icon: UtensilsCrossed,
         title: "Restaurante",
         desc: "Menu del dia, consultas y toma de pedidos.",
       },
       {
         tag: "demo-hoteleria",
-        emoji: "🏨",
+        icon: Building2,
         title: "Hoteleria",
         desc: "Disponibilidad de habitaciones, tarifas y consultas de reserva.",
       },
@@ -107,19 +119,19 @@ const GROUPS = [
 
 export default function Showroom() {
   return (
-    <section id="showroom" className="py-20 px-4 bg-slate-900">
+    <section id="showroom" className="py-20 px-4 bg-white border-t border-slate-100">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-white mb-3">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-3">
           Pruebalo ahora mismo
         </h2>
-        <p className="text-center text-slate-400 mb-12 text-sm">
+        <p className="text-center text-gray-500 mb-12 text-sm">
           Escribele a Alkia por WhatsApp y experimenta la demo de tu rubro.
         </p>
 
         <div className="space-y-10">
           {GROUPS.map((g) => (
             <div key={g.group}>
-              <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-4">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">
                 {g.group}
               </h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -129,7 +141,7 @@ export default function Showroom() {
                     href={waLink(d.tag)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="demo-card block p-5 rounded-2xl border border-slate-700 bg-slate-800 transition-all cursor-pointer"
+                    className="block p-5 rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 hover:border-alkia/30"
                     onClick={() => {
                       if (typeof window.fbq !== "undefined")
                         window.fbq("track", "ViewContent", {
@@ -138,10 +150,12 @@ export default function Showroom() {
                         });
                     }}
                   >
-                    <div className="text-3xl mb-3">{d.emoji}</div>
-                    <h4 className="font-semibold text-white mb-1">{d.title}</h4>
-                    <p className="text-slate-400 text-sm leading-relaxed">{d.desc}</p>
-                    <p className="mt-3 text-xs font-medium" style={{ color: "#0d9373" }}>
+                    <div className="w-11 h-11 rounded-xl bg-alkia-light text-alkia flex items-center justify-center mb-3">
+                      <d.icon className="w-5 h-5" />
+                    </div>
+                    <h4 className="font-semibold text-gray-900 mb-1">{d.title}</h4>
+                    <p className="text-gray-500 text-sm leading-relaxed">{d.desc}</p>
+                    <p className="mt-3 text-xs font-medium text-alkia">
                       Probar demo →
                     </p>
                   </a>
@@ -151,19 +165,19 @@ export default function Showroom() {
           ))}
         </div>
 
-        <p className="text-center text-slate-500 text-xs mt-8">
+        <p className="text-center text-gray-400 text-xs mt-8">
           Al escribir se abrira WhatsApp con el mensaje de inicio precargado.
         </p>
 
         {/* Banner plantillas */}
-        <div className="mt-8 max-w-2xl mx-auto py-4 px-6 rounded-xl bg-green-50 border border-green-200 text-sm text-gray-600 text-center">
+        <div className="mt-8 max-w-2xl mx-auto py-4 px-6 rounded-xl bg-alkia-light border border-alkia/20 text-sm text-gray-600 text-center">
           🗂️ Más de 80 plantillas base disponibles para distintos rubros.{" "}
           ¿Quieres una personalizada para tu negocio?{" "}
           <a
             href={waLink("Hola, me interesa saber más sobre las plantillas de Alkia")}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-700 font-medium hover:underline"
+            className="text-alkia-dark font-medium hover:underline"
           >
             Preguntale a Alkia →
           </a>
