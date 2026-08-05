@@ -1,3 +1,5 @@
+import { Truck } from "lucide-react";
+
 export default function Testimonials() {
   return (
     <section className="py-16 px-4 bg-white">
@@ -10,7 +12,9 @@ export default function Testimonials() {
         </p>
 
         <div className="max-w-xl mx-auto rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
-          <div className="text-4xl mb-4">🚚</div>
+          <div className="w-12 h-12 mx-auto rounded-xl bg-alkia-light text-alkia flex items-center justify-center mb-4">
+            <Truck className="w-6 h-6" />
+          </div>
           <h3 className="text-lg font-bold text-slate-900 mb-1">
             Distribuidora de agua, Temuco
           </h3>

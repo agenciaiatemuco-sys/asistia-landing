@@ -1,19 +1,21 @@
+import { QrCode, Settings2, Rocket } from "lucide-react";
+
 const steps = [
   {
     n: "1",
-    icon: "📱",
+    icon: QrCode,
     title: "Conecta tu WhatsApp",
     body: "Escanea un QR desde tu celular. Sin apps adicionales ni cambios de número.",
   },
   {
     n: "2",
-    icon: "✏️",
+    icon: Settings2,
     title: "Configura tu asistente",
     body: "Cuéntale sobre tu negocio en un cuestionario guiado. Menos de 10 minutos.",
   },
   {
     n: "3",
-    icon: "🚀",
+    icon: Rocket,
     title: "Listo, a trabajar",
     body: "Tu asistente responde consultas, toma pedidos y agenda citas 24/7 desde ese momento.",
   },
@@ -44,10 +46,10 @@ export default function HowItWorks() {
           {steps.map((s) => (
             <div key={s.n} className="flex flex-col items-center text-center px-8 relative">
               <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-5 relative z-10 shadow-md"
+                className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 relative z-10 shadow-md"
                 style={{ backgroundColor: "#ecfdf5", border: "2px solid #0d9373" }}
               >
-                {s.icon}
+                <s.icon className="w-5 h-5 text-alkia" />
               </div>
               <span
                 className="text-xs font-bold mb-1"
@@ -73,10 +75,10 @@ export default function HowItWorks() {
           {steps.map((s) => (
             <div key={s.n} className="flex gap-5 relative">
               <div
-                className="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center text-xl z-10 shadow-sm"
+                className="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center z-10 shadow-sm"
                 style={{ backgroundColor: "#ecfdf5", border: "2px solid #0d9373" }}
               >
-                {s.icon}
+                <s.icon className="w-5 h-5 text-alkia" />
               </div>
               <div className="pt-1">
                 <span className="text-xs font-bold block mb-0.5" style={{ color: "#0d9373" }}>

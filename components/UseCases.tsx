@@ -1,13 +1,25 @@
+import {
+  Truck,
+  ShoppingBag,
+  Sparkles,
+  Store,
+  Croissant,
+  Scissors,
+  ShoppingCart,
+  Dumbbell,
+  Scale,
+} from "lucide-react";
+
 const cases = [
-  { icon: "🚚", label: "Reparto y delivery" },
-  { icon: "🛍️", label: "Comercios y tiendas" },
-  { icon: "💆", label: "Salud y estetica" },
-  { icon: "🏪", label: "Almacenes y minimarkets" },
-  { icon: "🍞", label: "Panaderias y distribuidoras" },
-  { icon: "✂️", label: "Barberias y belleza" },
-  { icon: "🛒", label: "Ventas y catalogos" },
-  { icon: "🏋️", label: "Fitness y educacion" },
-  { icon: "⚖️", label: "Servicios profesionales" },
+  { icon: Truck, label: "Reparto y delivery" },
+  { icon: ShoppingBag, label: "Comercios y tiendas" },
+  { icon: Sparkles, label: "Salud y estetica" },
+  { icon: Store, label: "Almacenes y minimarkets" },
+  { icon: Croissant, label: "Panaderias y distribuidoras" },
+  { icon: Scissors, label: "Barberias y belleza" },
+  { icon: ShoppingCart, label: "Ventas y catalogos" },
+  { icon: Dumbbell, label: "Fitness y educacion" },
+  { icon: Scale, label: "Servicios profesionales" },
 ];
 
 export default function UseCases() {
@@ -27,7 +39,9 @@ export default function UseCases() {
               key={c.label}
               className="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
             >
-              <div className="text-4xl mb-3">{c.icon}</div>
+              <div className="w-11 h-11 mx-auto rounded-xl bg-alkia-light text-alkia flex items-center justify-center mb-3">
+                <c.icon className="w-5 h-5" />
+              </div>
               <p className="font-medium text-gray-800 text-sm">{c.label}</p>
             </div>
           ))}
