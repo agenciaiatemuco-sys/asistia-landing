@@ -2,16 +2,20 @@
 
 ## 2026-08-05 — Rediseño de la landing (referencia Lovable)
 
-Rediseño visual completo de la home, ejecutado en 6 PRs pequeños y mergeables,
-cada uno con build + lint + preview de Vercel revisado en móvil y desktop antes
-de aprobar. Referencia de diseño: `12714068-REFERENCIA_LOVABLE_LANDING.md`
-(TanStack Router + Tailwind v4, adaptado a este stack Next.js).
+Rediseño visual completo de la home y las páginas legales, ejecutado en PRs
+pequeños y mergeables, cada uno con build + lint + preview de Vercel revisado
+en móvil y desktop antes de aprobar. Referencia de diseño:
+`12714068-REFERENCIA_LOVABLE_LANDING.md` (TanStack Router + Tailwind v4,
+adaptado a este stack Next.js).
 
 **PRs mergeados:** #5 (PR 0 — higiene) · #6 (PR 1 — tokens) · #7 (PR 2 — chrome)
-· #8 (PR 3 — secciones) · #9 (PR 4 — Showroom) · #10 (PR 5 — Pricing + limpieza).
+· #8 (PR 3 — secciones) · #9 (PR 4 — Showroom) · #10 (PR 5 — Pricing + limpieza)
+· #11 (PR 6 — legales) · #13 (filtro por categoría del Showroom, follow-up
+post-cierre). #12 se cerró **sin mergear** — intento intermedio de layout del
+Showroom, superado por #13 antes de llegar a revisión.
 
-**PR 6 (restyling de las páginas legales — `/terminos`, `/privacidad`,
-`/eliminacion-de-datos`) queda pospuesto, sin fecha.**
+**El plan de 6 PRs quedó completo — PR 6 (legales) se retomó y mergeó el mismo
+día, ya no está pospuesto.**
 
 ### Qué cambió
 
@@ -41,6 +45,28 @@ de aprobar. Referencia de diseño: `12714068-REFERENCIA_LOVABLE_LANDING.md`
   `.gradient-text`, `.hero-glow`) migrados a `var(--alkia)` / tokens. De paso
   se corrigieron tildes faltantes detectadas en auditoría (`FAQ`, `UseCases`,
   `Showroom` — solo texto, ningún `tag`/`href` tocado).
+- **PR 6 — Legales:** restyle de `/terminos`, `/privacidad`,
+  `/eliminacion-de-datos` — el wrapper `bg-[#0f172a]` (oscuro) pasó a
+  `bg-white`, con textos, bordes y links migrados a los tokens `alkia-*`/
+  `gray-*` claros. El header/footer de estas 3 páginas es **propio y
+  simplificado** (logo + link a inicio, copyright) — decisión explícita de
+  **no** reutilizar el `Navbar`/`Footer` reales del sitio, porque las
+  páginas legales que Meta revisa para verificación de negocio deben quedar
+  neutras: sin CTAs de venta, sin links circulares a sí mismas, sin el JS
+  interactivo del Navbar. El contenido legal (numeración, montos, RUT,
+  fechas, la tabla de proveedores de `/privacidad`) **no se tocó un solo
+  carácter** — verificado con `git diff` línea por línea de los 3 archivos.
+- **Filtro por categoría del Showroom (post-cierre):** el layout apilado de
+  6 grupos de tamaños dispares (1, 3, 1, 1, 2, 2 cards) se veía descuadrado
+  en el preview real — dos intentos de ajustar el grid/flex *dentro* de
+  cada grupo no resolvían el problema de raíz. Se reemplazó por pills de
+  categoría (`Todos` + las 6 categorías) que filtran una única grilla, así
+  nunca hay más de un grupo visible a la vez y nunca una fila incompleta.
+  `GROUPS` y los 10 `tag` no se tocaron — se derivan `ALL_DEMOS`/
+  `CATEGORIES` a partir del array existente. El `fbq("track","ViewContent")`
+  sigue disparándose únicamente en el click de cada card (decisión explícita:
+  cambiar de categoría no cuenta como "vista" del contenido, para no inflar
+  el volumen del evento ni redefinir su semántica sin decisión de negocio).
 
 ### Qué quedó igual (decisión explícita, verificado en cada PR)
 
@@ -68,15 +94,20 @@ de aprobar. Referencia de diseño: `12714068-REFERENCIA_LOVABLE_LANDING.md`
   estático de la referencia.
 - **Enterprise:** se mantuvo completo, con sus 4 planes activos + el bloque
   de contacto a medida (no se simplificó a un tier separado).
+- **Contenido legal de las 3 páginas** (Términos, Privacidad, Eliminación de
+  datos) — cero cambios de texto en el PR 6, solo restyle visual.
 
-### Verificación de cierre (sobre `master`, post-merge del PR 5)
+### Verificación de cierre (sobre `master`, post-merge de #11 y #13 — estado final)
 
 - `npm run build` ✅ (incluye `tsc`) · `npm run lint` ✅ (0 errores, 1 warning
   preexistente de `<img>` en `layout.tsx`, fuera de alcance).
 - `validate-demos.mjs` ✅ exit 0 — 11 tags en Airtable/`DEMO_TAGS`, 10 cards
-  en la landing, `demo-rm` huérfana (demo fiel, esperado).
+  en la landing, `demo-rm` huérfana (demo fiel, esperado). Corrido en cada
+  PR que tocó `Showroom.tsx` (PR 4, PR 5, filtro por categoría) — siempre
+  exit 0, antes y después de cada cambio.
 - `grep` de hex de marca (`#0d9373`, `#0b7d62`, `#096750`, `#35a487`) en todo
-  el repo: **0 ocurrencias** fuera de las 3 páginas legales (a propósito,
-  diferidas al PR 6).
+  el repo: **0 ocurrencias** — incluidas las 3 páginas legales, ya migradas
+  en el PR 6.
 - `grep` de clases `emerald-*` y de `--color-emerald-*` en `globals.css`:
   **0 ocurrencias** en todo el repo.
+- 0 PRs abiertos en el repo — confirmado con `list_pull_requests` post-merge.
