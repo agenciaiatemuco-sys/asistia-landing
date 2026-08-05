@@ -1,8 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
-const WA_NUMBER = "56981748168";
+import { waLink } from "@/lib/links";
 
 export default function WhatsAppButton() {
   const [visible, setVisible] = useState(false);
@@ -16,7 +15,7 @@ export default function WhatsAppButton() {
 
   return (
     <a
-      href={`https://wa.me/${WA_NUMBER}`}
+      href={waLink()}
       target="_blank"
       rel="noopener noreferrer"
       className="wa-btn-appear fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform"

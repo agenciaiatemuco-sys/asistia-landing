@@ -1,12 +1,12 @@
 "use client";
 
+import { waLink } from "@/lib/links";
+
 declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void;
   }
 }
-
-const WA_NUMBER = "56981748168";
 
 // Demos agrupadas por nicho. Cada `tag` DEBE existir como Tag_Trigger activo en
 // [DEMO] Plantillas (Airtable) y estar en el array DEMO_TAGS de /api/chat del
@@ -126,7 +126,7 @@ export default function Showroom() {
                 {g.demos.map((d) => (
                   <a
                     key={d.tag}
-                    href={`https://wa.me/${WA_NUMBER}?text=${d.tag}`}
+                    href={waLink(d.tag)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="demo-card block p-5 rounded-2xl border border-slate-700 bg-slate-800 transition-all cursor-pointer"
@@ -160,7 +160,7 @@ export default function Showroom() {
           🗂️ Más de 80 plantillas base disponibles para distintos rubros.{" "}
           ¿Quieres una personalizada para tu negocio?{" "}
           <a
-            href={`https://wa.me/${WA_NUMBER}?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20las%20plantillas%20de%20Alkia`}
+            href={waLink("Hola, me interesa saber más sobre las plantillas de Alkia")}
             target="_blank"
             rel="noopener noreferrer"
             className="text-green-700 font-medium hover:underline"

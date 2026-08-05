@@ -1,13 +1,12 @@
 "use client";
 
+import { DASHBOARD_URL } from "@/lib/links";
+
 declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void;
   }
 }
-
-const DASHBOARD_URL =
-  process.env.NEXT_PUBLIC_DASHBOARD_URL ?? "https://panel.miasistia.cl";
 
 function trackLead() {
   if (typeof window.fbq !== "undefined") window.fbq("track", "Lead");

@@ -1,5 +1,4 @@
-const DASHBOARD_URL =
-  process.env.NEXT_PUBLIC_DASHBOARD_URL ?? "https://panel.miasistia.cl";
+import { DASHBOARD_URL, waLink } from "@/lib/links";
 
 export default function Footer() {
   return (
@@ -34,7 +33,7 @@ export default function Footer() {
             soporte@alkia.cl
           </a>
           <a
-            href="https://wa.me/56981748168"
+            href={waLink()}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-700 transition-colors"
