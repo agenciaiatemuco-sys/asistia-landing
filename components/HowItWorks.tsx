@@ -38,23 +38,17 @@ export default function HowItWorks() {
           <div
             className="absolute top-6 left-[calc(16.67%+28px)] right-[calc(16.67%+28px)] h-0.5"
             style={{
-              background: "linear-gradient(to right, #0d9373, #0b7d62)",
+              background: "linear-gradient(to right, var(--alkia), var(--alkia-dark))",
               opacity: 0.4,
             }}
           />
 
           {steps.map((s) => (
             <div key={s.n} className="flex flex-col items-center text-center px-8 relative">
-              <div
-                className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 relative z-10 shadow-md"
-                style={{ backgroundColor: "#ecfdf5", border: "2px solid #0d9373" }}
-              >
+              <div className="w-12 h-12 rounded-xl bg-alkia-light border-2 border-alkia flex items-center justify-center mb-5 relative z-10 shadow-md">
                 <s.icon className="w-5 h-5 text-alkia" />
               </div>
-              <span
-                className="text-xs font-bold mb-1"
-                style={{ color: "#0d9373" }}
-              >
+              <span className="text-xs font-bold text-alkia mb-1">
                 Paso {s.n}
               </span>
               <h3 className="font-semibold text-gray-900 mb-2">{s.title}</h3>
@@ -68,20 +62,17 @@ export default function HowItWorks() {
           <div
             className="absolute left-6 top-6 bottom-6 w-0.5"
             style={{
-              background: "linear-gradient(to bottom, #0d9373, #0b7d62)",
+              background: "linear-gradient(to bottom, var(--alkia), var(--alkia-dark))",
               opacity: 0.4,
             }}
           />
           {steps.map((s) => (
             <div key={s.n} className="flex gap-5 relative">
-              <div
-                className="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center z-10 shadow-sm"
-                style={{ backgroundColor: "#ecfdf5", border: "2px solid #0d9373" }}
-              >
+              <div className="w-12 h-12 shrink-0 rounded-xl bg-alkia-light border-2 border-alkia flex items-center justify-center z-10 shadow-sm">
                 <s.icon className="w-5 h-5 text-alkia" />
               </div>
               <div className="pt-1">
-                <span className="text-xs font-bold block mb-0.5" style={{ color: "#0d9373" }}>
+                <span className="text-xs font-bold text-alkia block mb-0.5">
                   Paso {s.n}
                 </span>
                 <h3 className="font-semibold text-gray-900 mb-1">{s.title}</h3>

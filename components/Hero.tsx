@@ -34,8 +34,7 @@ export default function Hero() {
               onClick={() => {
                 if (typeof window.fbq !== "undefined") window.fbq("track", "Lead");
               }}
-              className="px-6 py-3 rounded-xl font-semibold text-white transition-opacity hover:opacity-90 shadow-sm"
-              style={{ backgroundColor: "#0d9373" }}
+              className="px-6 py-3 rounded-xl font-semibold text-white bg-alkia shadow-sm transition-colors hover:bg-alkia-dark"
             >
               Pruébalo 14 días gratis
             </a>
@@ -73,10 +72,7 @@ export default function Hero() {
               className="px-4 py-3 flex items-center gap-3"
               style={{ backgroundColor: "#075e54" }}
             >
-              <div
-                className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0"
-                style={{ backgroundColor: "#0d9373" }}
-              >
+              <div className="w-9 h-9 rounded-full bg-alkia flex items-center justify-center text-white text-sm font-bold shrink-0">
                 A
               </div>
               <div>

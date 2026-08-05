@@ -32,7 +32,7 @@ const GROUPS = [
         tag: "demo-despachos",
         icon: Truck,
         title: "Reparto / Delivery",
-        desc: "Toma de pedidos, direccion de entrega, horarios de despacho y seguimiento.",
+        desc: "Toma de pedidos, dirección de entrega, horarios de despacho y seguimiento.",
       },
     ],
   },
@@ -42,20 +42,20 @@ const GROUPS = [
       {
         tag: "demo-medico",
         icon: Stethoscope,
-        title: "Consulta medica",
+        title: "Consulta médica",
         desc: "Agendamiento de horas, especialidades, valores y disponibilidad de agenda.",
       },
       {
         tag: "demo-odonto",
         icon: Smile,
-        title: "Dental / Odontologia",
+        title: "Dental / Odontología",
         desc: "Agendamiento de urgencias, procedimientos y aranceles.",
       },
       {
         tag: "demo-salud",
         icon: ScanLine,
-        title: "Centro de imagenes",
-        desc: "Examenes, preparacion, ordenes medicas y agendamiento de horas.",
+        title: "Centro de imágenes",
+        desc: "Exámenes, preparación, órdenes médicas y agendamiento de horas.",
       },
     ],
   },
@@ -65,7 +65,7 @@ const GROUPS = [
       {
         tag: "demo-estetica",
         icon: Sparkles,
-        title: "Centro de estetica",
+        title: "Centro de estética",
         desc: "Tratamientos faciales, corporales, precios y reservas.",
       },
     ],
@@ -76,8 +76,8 @@ const GROUPS = [
       {
         tag: "demo-legal",
         icon: Scale,
-        title: "Estudio juridico",
-        desc: "Consulta de areas de practica, honorarios y primeras consultas.",
+        title: "Estudio jurídico",
+        desc: "Consulta de áreas de práctica, honorarios y primeras consultas.",
       },
     ],
   },
@@ -88,7 +88,7 @@ const GROUPS = [
         tag: "demo-ecommerce",
         icon: ShoppingBag,
         title: "Tienda online",
-        desc: "Catalogo de productos, estado de pedidos, metodos de pago y despacho.",
+        desc: "Catálogo de productos, estado de pedidos, métodos de pago y despacho.",
       },
       {
         tag: "demo-stock",
@@ -105,7 +105,7 @@ const GROUPS = [
         tag: "demo-restaurant",
         icon: UtensilsCrossed,
         title: "Restaurante",
-        desc: "Menu del dia, consultas y toma de pedidos.",
+        desc: "Menú del día, consultas y toma de pedidos.",
       },
       {
         tag: "demo-hoteleria",
@@ -122,10 +122,10 @@ export default function Showroom() {
     <section id="showroom" className="py-20 px-4 bg-white border-t border-slate-100">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-3">
-          Pruebalo ahora mismo
+          Pruébalo ahora mismo
         </h2>
         <p className="text-center text-gray-500 mb-12 text-sm">
-          Escribele a Alkia por WhatsApp y experimenta la demo de tu rubro.
+          Escríbele a Alkia por WhatsApp y experimenta la demo de tu rubro.
         </p>
 
         <div className="space-y-10">
@@ -166,7 +166,7 @@ export default function Showroom() {
         </div>
 
         <p className="text-center text-gray-400 text-xs mt-8">
-          Al escribir se abrira WhatsApp con el mensaje de inicio precargado.
+          Al escribir se abrirá WhatsApp con el mensaje de inicio precargado.
         </p>
 
         {/* Banner plantillas */}
@@ -179,7 +179,7 @@ export default function Showroom() {
             rel="noopener noreferrer"
             className="text-alkia-dark font-medium hover:underline"
           >
-            Preguntale a Alkia →
+            Pregúntale a Alkia →
           </a>
         </div>
       </div>
