@@ -13,12 +13,12 @@ import {
 const cases = [
   { icon: Truck, label: "Reparto y delivery" },
   { icon: ShoppingBag, label: "Comercios y tiendas" },
-  { icon: Sparkles, label: "Salud y estetica" },
+  { icon: Sparkles, label: "Salud y estética" },
   { icon: Store, label: "Almacenes y minimarkets" },
-  { icon: Croissant, label: "Panaderias y distribuidoras" },
-  { icon: Scissors, label: "Barberias y belleza" },
-  { icon: ShoppingCart, label: "Ventas y catalogos" },
-  { icon: Dumbbell, label: "Fitness y educacion" },
+  { icon: Croissant, label: "Panaderías y distribuidoras" },
+  { icon: Scissors, label: "Barberías y belleza" },
+  { icon: ShoppingCart, label: "Ventas y catálogos" },
+  { icon: Dumbbell, label: "Fitness y educación" },
   { icon: Scale, label: "Servicios profesionales" },
 ];
 
