@@ -134,14 +134,14 @@ export default function Showroom() {
               <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-4">
                 {g.group}
               </h3>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 {g.demos.map((d) => (
                   <a
                     key={d.tag}
                     href={waLink(d.tag)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block p-5 rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 hover:border-alkia/30"
+                    className="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.667rem)] block p-5 rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 hover:border-alkia/30"
                     onClick={() => {
                       if (typeof window.fbq !== "undefined")
                         window.fbq("track", "ViewContent", {
