@@ -1,5 +1,6 @@
 "use client";
 
+import { Check } from "lucide-react";
 import { DASHBOARD_URL } from "@/lib/links";
 
 declare global {
@@ -54,7 +55,7 @@ export default function Hero() {
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             {["Sin permanencia", "Sin instalación", "Soporte incluido"].map((c) => (
               <span key={c} className="flex items-center gap-1.5 text-sm text-gray-500">
-                <span className="text-emerald-500 font-bold">✓</span>
+                <Check className="w-4 h-4 text-alkia" />
                 {c}
               </span>
             ))}

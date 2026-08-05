@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Plus } from "lucide-react";
 
 const ITEMS = [
   {
@@ -58,12 +59,10 @@ export default function FAQ() {
                 onClick={() => setOpen(open === i ? null : i)}
               >
                 <span className="font-medium text-gray-900 text-sm">{item.q}</span>
-                <span
-                  className="text-gray-400 shrink-0 text-lg transition-transform duration-200"
+                <Plus
+                  className="w-4 h-4 text-gray-400 shrink-0 transition-transform duration-200"
                   style={{ transform: open === i ? "rotate(45deg)" : "none" }}
-                >
-                  +
-                </span>
+                />
               </button>
               {open === i && (
                 <div className="px-6 pb-4">

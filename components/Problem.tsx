@@ -1,16 +1,21 @@
+import { MessageSquareX, RefreshCw, ClipboardList } from "lucide-react";
+
 const problems = [
   {
-    icon: "📵",
+    icon: MessageSquareX,
+    tone: "bg-red-50 text-red-500",
     title: "Mensajes sin responder",
     body: "Cada mensaje que demora en responderse es un cliente o pedido que se pierde. WhatsApp no espera.",
   },
   {
-    icon: "🔁",
+    icon: RefreshCw,
+    tone: "bg-amber-50 text-amber-500",
     title: "Las mismas preguntas",
     body: "Precios, disponibilidad, horarios, estado del pedido. Respondes lo mismo 20 veces al dia. Tu tiempo vale mucho mas que eso.",
   },
   {
-    icon: "📋",
+    icon: ClipboardList,
+    tone: "bg-alkia-light text-alkia",
     title: "Todo mezclado, sin sistema",
     body: "Pedidos, citas y consultas en el mismo chat. Sin un sistema claro, algo siempre se pierde o se olvida.",
   },
@@ -33,7 +38,9 @@ export default function Problem() {
               key={p.title}
               className="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
             >
-              <div className="text-4xl mb-4">{p.icon}</div>
+              <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 ${p.tone}`}>
+                <p.icon className="w-5 h-5" />
+              </div>
               <h3 className="font-semibold text-gray-900 mb-2">{p.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed">{p.body}</p>
             </div>
