@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -12,28 +13,30 @@ export const metadata: Metadata = {
 // <main> en un commit de este archivo.
 export default function EliminacionDeDatosPage() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#0f172a" }}>
-      <header className="border-b border-white/10 px-4 py-5">
+    <div className="min-h-screen bg-white">
+      <header className="border-b border-slate-100 px-4 py-5 bg-white">
         <div className="max-w-3xl mx-auto">
-          <Link
-            href="/"
-            className="text-xl font-bold"
-            style={{ color: "#0d9373" }}
-          >
-            ✦ Alkia
+          <Link href="/" className="inline-block">
+            <Image
+              src="/brand/alkia-wordmark.png"
+              alt="Alkia"
+              width={96}
+              height={31}
+              style={{ height: "auto" }}
+            />
           </Link>
         </div>
       </header>
 
       <main className="max-w-3xl mx-auto px-4 py-16">
-        <h1 className="text-3xl font-bold text-white mb-2">
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">
           Eliminación de datos de usuario
         </h1>
-        <p className="text-gray-400 text-sm mb-12">
+        <p className="text-gray-500 text-sm mb-12">
           Última actualización: 22 de julio de 2026
         </p>
 
-        <div className="space-y-10 text-gray-300 leading-relaxed">
+        <div className="space-y-10 text-gray-600 leading-relaxed">
           <p>
             Alkia SpA respeta tu derecho a decidir sobre tus datos personales.
             En esta página te explicamos cómo solicitar la eliminación de los
@@ -42,7 +45,7 @@ export default function EliminacionDeDatosPage() {
           </p>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               ¿Qué datos podemos eliminar?
             </h2>
             <p className="mb-3">
@@ -65,7 +68,7 @@ export default function EliminacionDeDatosPage() {
               </li>
             </ul>
             <p>
-              <strong className="text-white">Nota:</strong> los registros de
+              <strong className="text-gray-900">Nota:</strong> los registros de
               citas, reservas o pedidos ya gestionados pueden requerir
               conservación por parte del negocio con el que contrataste (por
               ejemplo, por razones contables o de atención médica). En esos
@@ -75,18 +78,17 @@ export default function EliminacionDeDatosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               ¿Cómo solicito la eliminación?
             </h2>
             <p className="mb-3">
-              <strong className="text-white">
+              <strong className="text-gray-900">
                 Opción 1 — Por correo electrónico (recomendada):
               </strong>{" "}
               Escribe a{" "}
               <a
                 href="mailto:soporte@alkia.cl"
-                className="underline underline-offset-2"
-                style={{ color: "#0d9373" }}
+                className="text-alkia underline underline-offset-2 hover:text-alkia-dark transition-colors"
               >
                 soporte@alkia.cl
               </a>{" "}
@@ -107,7 +109,7 @@ export default function EliminacionDeDatosPage() {
               número o correo).
             </p>
             <p>
-              <strong className="text-white">
+              <strong className="text-gray-900">
                 Opción 2 — Directamente con el negocio:
               </strong>{" "}
               También puedes pedir la eliminación directamente al negocio con el
@@ -117,7 +119,7 @@ export default function EliminacionDeDatosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">Plazos</h2>
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">Plazos</h2>
             <p>
               Confirmaremos la recepción de tu solicitud dentro de 5 días
               hábiles y completaremos la eliminación dentro de un máximo de 30
@@ -127,7 +129,7 @@ export default function EliminacionDeDatosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               ¿Y los datos que guarda WhatsApp?
             </h2>
             <p>
@@ -140,22 +142,20 @@ export default function EliminacionDeDatosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">Contacto</h2>
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">Contacto</h2>
             <p>
               Para cualquier duda sobre este procedimiento o sobre el
               tratamiento de tus datos, revisa nuestra{" "}
               <Link
                 href="/privacidad"
-                className="underline underline-offset-2"
-                style={{ color: "#0d9373" }}
+                className="text-alkia underline underline-offset-2 hover:text-alkia-dark transition-colors"
               >
                 Política de Privacidad
               </Link>{" "}
               o escríbenos a{" "}
               <a
                 href="mailto:soporte@alkia.cl"
-                className="underline underline-offset-2"
-                style={{ color: "#0d9373" }}
+                className="text-alkia underline underline-offset-2 hover:text-alkia-dark transition-colors"
               >
                 soporte@alkia.cl
               </a>
@@ -163,14 +163,14 @@ export default function EliminacionDeDatosPage() {
             </p>
           </section>
 
-          <p className="text-sm text-gray-500 pt-6 border-t border-white/10">
+          <p className="text-sm text-gray-500 pt-6 border-t border-slate-100">
             Alkia SpA · RUT 78.469.837-8 · Temuco, Chile
           </p>
         </div>
       </main>
 
-      <footer className="border-t border-white/10 px-4 py-8">
-        <p className="max-w-3xl mx-auto text-xs text-gray-500">
+      <footer className="border-t border-slate-100 px-4 py-8 bg-white">
+        <p className="max-w-3xl mx-auto text-xs text-gray-400">
           © {new Date().getFullYear()} Alkia. Todos los derechos reservados.
         </p>
       </footer>
