@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import { DASHBOARD_URL } from "@/lib/links";
 
 declare global {
@@ -29,12 +30,14 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-white"
+      className={`fixed top-0 inset-x-0 z-50 border-b transition-all duration-300 ${
+        scrolled
+          ? "bg-white/90 backdrop-blur-md border-slate-100 shadow-sm"
+          : "bg-white border-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo — PNG wordmark real, no el SVG del referente */}
         <a href="#" className="flex items-center">
           <Image
             src="/brand/alkia-wordmark.png"
@@ -52,7 +55,7 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+              className="text-sm text-gray-600 hover:text-alkia-dark transition-colors"
             >
               {l.label}
             </a>
@@ -62,7 +65,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <a
             href={`${DASHBOARD_URL}/login`}
-            className="hidden sm:block text-sm font-semibold text-gray-600 hover:text-emerald-600 transition-colors"
+            className="hidden sm:block text-sm font-semibold text-gray-600 hover:text-alkia-dark transition-colors"
           >
             Entrar
           </a>
@@ -71,8 +74,7 @@ export default function Navbar() {
             onClick={() => {
               if (typeof window.fbq !== "undefined") window.fbq("track", "Lead");
             }}
-            className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-opacity hover:opacity-90"
-            style={{ backgroundColor: "#0d9373" }}
+            className="px-4 py-2 rounded-xl text-sm font-bold text-white bg-alkia shadow-sm transition-all hover:bg-alkia-dark"
           >
             Empezar gratis →
           </a>
@@ -83,9 +85,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Menú"
           >
-            <span className="block w-5 h-0.5 bg-current mb-1" />
-            <span className="block w-5 h-0.5 bg-current mb-1" />
-            <span className="block w-5 h-0.5 bg-current" />
+            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
@@ -105,7 +105,7 @@ export default function Navbar() {
           ))}
           <a
             href={`${DASHBOARD_URL}/login`}
-            className="text-sm font-semibold text-emerald-600"
+            className="text-sm font-semibold text-alkia-dark"
             onClick={() => setMenuOpen(false)}
           >
             Iniciar sesión
