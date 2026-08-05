@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -12,37 +13,39 @@ export const metadata: Metadata = {
 // <main> en un commit de este archivo.
 export default function TerminosPage() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#0f172a" }}>
-      <header className="border-b border-white/10 px-4 py-5">
+    <div className="min-h-screen bg-white">
+      <header className="border-b border-slate-100 px-4 py-5 bg-white">
         <div className="max-w-3xl mx-auto">
-          <Link
-            href="/"
-            className="text-xl font-bold"
-            style={{ color: "#0d9373" }}
-          >
-            ✦ Alkia
+          <Link href="/" className="inline-block">
+            <Image
+              src="/brand/alkia-wordmark.png"
+              alt="Alkia"
+              width={96}
+              height={31}
+              style={{ height: "auto" }}
+            />
           </Link>
         </div>
       </header>
 
       <main className="max-w-3xl mx-auto px-4 py-16">
-        <h1 className="text-3xl font-bold text-white mb-2">
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">
           Términos y Condiciones de Uso
         </h1>
-        <p className="text-gray-400 text-sm mb-12">
+        <p className="text-gray-500 text-sm mb-12">
           Última actualización: 22 de julio de 2026
         </p>
 
-        <div className="space-y-10 text-gray-300 leading-relaxed">
+        <div className="space-y-10 text-gray-600 leading-relaxed">
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               1. Identificación del proveedor
             </h2>
             <p className="mb-3">
               Los presentes Términos y Condiciones regulan el acceso y uso de la
-              plataforma <strong className="text-white">Alkia</strong> (en
+              plataforma <strong className="text-gray-900">Alkia</strong> (en
               adelante, “la Plataforma” o “el Servicio”), operada por{" "}
-              <strong className="text-white">Alkia SpA</strong>, RUT
+              <strong className="text-gray-900">Alkia SpA</strong>, RUT
               78.469.837-8, con domicilio en Temuco, Región de La Araucanía,
               Chile (en adelante, “Alkia”).
             </p>
@@ -50,8 +53,7 @@ export default function TerminosPage() {
               Contacto:{" "}
               <a
                 href="mailto:soporte@alkia.cl"
-                className="underline underline-offset-2"
-                style={{ color: "#0d9373" }}
+                className="text-alkia underline underline-offset-2 hover:text-alkia-dark transition-colors"
               >
                 soporte@alkia.cl
               </a>
@@ -59,7 +61,7 @@ export default function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               2. Descripción del Servicio
             </h2>
             <p className="mb-3">
@@ -80,7 +82,7 @@ export default function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               3. Aceptación de los términos
             </h2>
             <p className="mb-3">
@@ -98,7 +100,7 @@ export default function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               4. Cuentas y acceso
             </h2>
             <p className="mb-3">
@@ -120,7 +122,7 @@ export default function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               5. Planes, precios y facturación
             </h2>
             <p className="mb-3">
@@ -148,7 +150,7 @@ export default function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               6. Obligaciones y uso aceptable
             </h2>
             <p className="mb-3">
@@ -175,7 +177,7 @@ export default function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               7. Naturaleza del servicio de inteligencia artificial
             </h2>
             <p className="mb-3">
@@ -195,15 +197,14 @@ export default function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               8. Datos personales
             </h2>
             <p>
               El tratamiento de datos personales se rige por la{" "}
               <Link
                 href="/privacidad"
-                className="underline underline-offset-2"
-                style={{ color: "#0d9373" }}
+                className="text-alkia underline underline-offset-2 hover:text-alkia-dark transition-colors"
               >
                 Política de Privacidad
               </Link>{" "}
@@ -217,7 +218,7 @@ export default function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               9. Propiedad intelectual
             </h2>
             <p className="mb-3">
@@ -234,7 +235,7 @@ export default function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               10. Disponibilidad y dependencia de terceros
             </h2>
             <p className="mb-3">
@@ -252,7 +253,7 @@ export default function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               11. Limitación de responsabilidad
             </h2>
             <p className="mb-3">
@@ -270,7 +271,7 @@ export default function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               12. Vigencia y término
             </h2>
             <p className="mb-3">
@@ -293,7 +294,7 @@ export default function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               13. Modificaciones
             </h2>
             <p>
@@ -305,7 +306,7 @@ export default function TerminosPage() {
           </section>
 
           <section>
-            <h2 className="text-lg font-semibold text-white mb-3">
+            <h2 className="text-lg font-semibold text-gray-900 mb-3">
               14. Ley aplicable y jurisdicción
             </h2>
             <p>
@@ -316,12 +317,11 @@ export default function TerminosPage() {
             </p>
           </section>
 
-          <p className="text-sm text-gray-500 pt-6 border-t border-white/10">
+          <p className="text-sm text-gray-500 pt-6 border-t border-slate-100">
             Alkia SpA · RUT 78.469.837-8 · Temuco, Chile ·{" "}
             <a
               href="mailto:soporte@alkia.cl"
-              className="underline underline-offset-2"
-              style={{ color: "#0d9373" }}
+              className="text-alkia underline underline-offset-2 hover:text-alkia-dark transition-colors"
             >
               soporte@alkia.cl
             </a>
@@ -329,8 +329,8 @@ export default function TerminosPage() {
         </div>
       </main>
 
-      <footer className="border-t border-white/10 px-4 py-8">
-        <p className="max-w-3xl mx-auto text-xs text-gray-500">
+      <footer className="border-t border-slate-100 px-4 py-8 bg-white">
+        <p className="max-w-3xl mx-auto text-xs text-gray-400">
           © {new Date().getFullYear()} Alkia. Todos los derechos reservados.
         </p>
       </footer>
