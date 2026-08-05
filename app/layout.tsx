@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Geist } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const META_PIXEL_ID = "963720630003338";
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta" });
 
 export const metadata: Metadata = {
   title: "Alkia — Tu negocio se atiende solo, las 24 horas",
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${geist.variable} h-full`}>
+    <html lang="es" className={`${jakarta.variable} h-full`}>
       <body className="min-h-full antialiased">
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
