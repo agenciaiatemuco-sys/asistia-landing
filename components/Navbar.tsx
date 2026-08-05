@@ -2,15 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { DASHBOARD_URL } from "@/lib/links";
 
 declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void;
   }
 }
-
-const DASHBOARD_URL =
-  process.env.NEXT_PUBLIC_DASHBOARD_URL ?? "https://panel.miasistia.cl";
 
 const NAV_LINKS = [
   { label: "Cómo funciona", href: "#como-funciona" },
@@ -63,7 +61,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <a
-            href="https://panel.miasistia.cl/login"
+            href={`${DASHBOARD_URL}/login`}
             className="hidden sm:block text-sm font-semibold text-gray-600 hover:text-emerald-600 transition-colors"
           >
             Entrar
@@ -106,7 +104,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://panel.miasistia.cl/login"
+            href={`${DASHBOARD_URL}/login`}
             className="text-sm font-semibold text-emerald-600"
             onClick={() => setMenuOpen(false)}
           >

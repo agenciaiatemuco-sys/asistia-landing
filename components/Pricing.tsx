@@ -1,13 +1,12 @@
 "use client";
 
+import { DASHBOARD_URL, waLink } from "@/lib/links";
+
 declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void;
   }
 }
-
-const DASHBOARD_URL =
-  process.env.NEXT_PUBLIC_DASHBOARD_URL ?? "https://panel.miasistia.cl";
 
 function trackLead() {
   if (typeof window.fbq !== "undefined") window.fbq("track", "Lead");
@@ -130,7 +129,7 @@ export default function Pricing() {
             <h3 className="text-2xl font-extrabold text-white mb-2">¿Más de 10.000 interacciones al mes?</h3>
             <p className="text-slate-400 text-sm max-w-lg">Conversemos un plan a tu medida. Múltiples instancias, integraciones personalizadas y soporte dedicado.</p>
           </div>
-          <a href="https://wa.me/56981748168?text=Hola%2C%20me%20interesa%20el%20Plan%20Enterprise"
+          <a href={waLink("Hola, me interesa el Plan Enterprise")}
              target="_blank"
              rel="noopener noreferrer"
              onClick={trackLead}

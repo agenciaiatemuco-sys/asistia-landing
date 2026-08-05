@@ -9,7 +9,6 @@ import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
@@ -27,7 +26,6 @@ export default function Home() {
         <CTAFinal />
       </main>
       <Footer />
-      <WhatsAppButton />
     </>
   );
 }
