@@ -1,5 +1,83 @@
 # Changelog
 
+## 2026-08-10 — Swap del logo Alkia (wordmark con transparencia real)
+
+Reemplazo de los 4 assets de marca por el wordmark nuevo
+(`alkia-wordmark-transparente.png`, 1487×534 RGBA, bajado de Drive → carpeta
+Alkia). Los anteriores eran PNG **opacos con fondo blanco pintado** — se veían
+bien solo porque el header y el footer también son blancos; sobre cualquier
+fondo que no fuera `#fff` aparecía el recuadro.
+
+> **⚠️ Asset provisional.** Este archivo **no** es el export vectorial
+> original: sale de un recorte + remoción de fondo hecha a mano sobre una
+> imagen generada. Reemplazar por el export vectorial (SVG/PNG desde el
+> archivo de diseño) cuando esté disponible. Ver "Deuda del asset" abajo.
+
+### Qué cambió
+
+- **`public/brand/alkia-wordmark.png`** ← el archivo de Drive tal cual, sin
+  reprocesar. 830×266 RGB opaco → 1487×534 RGBA con alpha real.
+- **`public/brand/alkia-icon.png`** ← 512×512 transparente, recortado del
+  **ícono de chat** del wordmark (componente aislado en x 958‑1156, y 20‑210)
+  y centrado con 8% de margen. El archivo de Drive no trae versión cuadrada
+  separada; letterboxear el wordmark completo en un cuadrado daba un asset
+  ilegible, y el burbuja-chat es la única forma cuadrada que el propio
+  wordmark contiene. **Este archivo no está referenciado por ningún
+  componente** — ya era así antes del swap, se actualizó por consistencia.
+- **`app/apple-icon.png`** ← 180×180, mismo recorte del ícono, **fondo blanco
+  opaco** (iOS no respeta alpha en apple-touch-icons; el archivo anterior
+  también era opaco).
+- **`app/favicon.ico`** ← 16/32/48 desde el mismo recorte, con transparencia
+  (el anterior era opaco). Ambos los toma Next por convención de `app/`, no
+  hay ningún `<link rel="icon">` ni referencia en `layout.tsx` que tocar.
+- **Los 2 íconos anteriores eran de la marca vieja** (el "spark" teal, no el
+  verde actual) — el swap los alinea con el wordmark por primera vez.
+- **`height` de los 5 `<Image>` del wordmark** ajustado al aspect ratio nuevo
+  (2.78 vs 3.12 del anterior): Navbar `36 → 40`, Footer y las 3 páginas
+  legales `31 → 34`. El `width` **no** se tocó, y los 5 usos ya traían
+  `style={{ height: "auto" }}`, así que **el tamaño renderizado no cambia** —
+  el ajuste solo corrige la caja que Next reserva para evitar CLS.
+
+### Deuda del asset (medido, no estimado)
+
+- **Halo oscuro en los bordes:** real y confirmado. El píxel más externo de
+  todo el contorno promedia RGB `(2, 32, 11)` — casi negro — contra el verde
+  de marca `(27, 148, 66)` del interior; el segundo anillo, `(19, 95, 46)`.
+  Es un borde oscuro de ~2px sobre una imagen de 1487px de ancho.
+- **A tamaño real no se nota.** El wordmark se renderiza a 112px (Navbar) y
+  96px (Footer/legales) — un downscale de 13×, que deja el halo en fracción
+  de píxel. Verificado con screenshots del build de producción a DPR 2
+  (Navbar arriba, Navbar con scroll sobre `bg-white/90` + blur, header de
+  `/terminos`, Footer): en todos se ve limpio. Recién al ampliar 4× aparece
+  un borde apenas más oscuro, y solo en las letras claras (`ia`), donde
+  contrasta con el verde brillante; en la mitad verde oscura (`Alk`) es
+  invisible. **No bloquea el merge.**
+- **Alpha binario:** 0% de píxeles semitransparentes (51.7% transparente,
+  48.3% opaco). El recorte no tiene antialiasing propio; los bordes suaves
+  del render final los produce el downscale del navegador. Se notaría si
+  alguna vez se usa el wordmark a tamaño cercano al nativo.
+- **~14 píxeles sueltos** (componentes de 1‑2px) flotando en la zona
+  transparente, residuo de la remoción de fondo. Invisibles al render; se
+  dejaron tal cual para no alterar el archivo que entregó el diseño. El
+  recorte del ícono sí los excluye (se filtró por componente conexo).
+
+### Qué NO se tocó
+
+- **No había archivos `.jpg`** en el repo (ni en el árbol actual ni en el
+  historial de git) — no hubo nada que borrar ni que dejar igual.
+- Ningún `href`, `tag` de demo, número de WhatsApp, texto legal ni evento
+  `fbq`. El swap es assets + 5 valores de `height`.
+
+### Verificación
+
+- `npm run build` ✅ · `npm run lint` ✅ (1 warning preexistente de `<img>` en
+  `layout.tsx`, fuera de alcance).
+- `grep` de `alkia-wordmark` / `alkia-icon` en todo el repo: los 5 usos del
+  wordmark siguen apuntando a la misma ruta, `alkia-icon.png` sigue sin
+  referencias.
+
+---
+
 ## 2026-08-05 — Rediseño de la landing (referencia Lovable)
 
 Rediseño visual completo de la home y las páginas legales, ejecutado en PRs

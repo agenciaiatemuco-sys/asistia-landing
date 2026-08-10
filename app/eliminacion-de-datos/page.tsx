@@ -21,7 +21,7 @@ export default function EliminacionDeDatosPage() {
               src="/brand/alkia-wordmark.png"
               alt="Alkia"
               width={96}
-              height={31}
+              height={34}
               style={{ height: "auto" }}
             />
           </Link>
