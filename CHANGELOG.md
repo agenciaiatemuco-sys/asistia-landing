@@ -1,5 +1,59 @@
 # Changelog
 
+## 2026-08-10 — Logo v2: paleta corregida (`alkia-wordmark-paleta-v2.png`)
+
+Segundo swap del logo el mismo día, sobre el que se mergeó en #14. Corrige la
+paleta y, de paso, el halo. Los 4 assets se regeneran desde el archivo nuevo.
+
+**Se creó `docs/SEGUIMIENTO_ALKIA.md`** — no existía en este repo (ni en el
+árbol ni en el historial de git). Queda como el hilo del logo; este CHANGELOG
+sigue siendo la fuente de detalle.
+
+### Qué cambió
+
+- **Degradado del cuerpo** ahora `#0c5b45 → #2d8368` — exactamente
+  `--alkia-dark` y `--alkia` de `globals.css` convertidos de oklch a hex.
+  Verificado: coinciden byte a byte con los tokens del sitio. El v1 se iba a
+  `#5eea32`, un verde brillante fuera de paleta.
+- **Destello de la "A" y aro/puntitos de la burbuja** en `#42d46c`, que es
+  exactamente `--alkia-accent`, separados del degradado del cuerpo. Son el
+  3.2% de los píxeles opacos.
+- **El halo del v1 desapareció.** El anillo más externo pasó de RGB
+  `(2, 32, 11)` — casi negro — a `(13, 92, 70)`, verde del cuerpo.
+- **La máscara alpha es idéntica al v1, bit a bit** — v2 es el mismo recorte
+  recoloreado, no uno nuevo. Arrastra el **alpha binario** (0% de píxeles
+  semitransparentes) y los **13 píxeles sueltos** de 1‑2px en la zona
+  transparente. Ninguno se ve al render; el recorte del ícono sí los filtra.
+- Mismas dimensiones que el v1 (1487×534), así que **ningún componente se
+  tocó** — los `height` ya estaban en el aspect ratio correcto.
+
+> **⚠️ Sigue siendo provisional.** Deriva de una foto recortada, no del export
+> vectorial original.
+
+### Verificación
+
+- `npm run build` ✅ · `npm run lint` ✅ (1 warning preexistente de `<img>`).
+- Capturas del build de producción a DPR 2 en navbar, navbar con scroll,
+  footer y el header de las 3 legales, más mobile a DPR 3.
+- Revisado sobre blanco, `slate-50`, el `bg-white/90` + blur de la navbar con
+  scroll y `#e4f6ee`: limpio en los cuatro.
+- **Ojo:** el footer de esta landing es `bg-white`, no `#e4f6ee`. Ese hex es
+  el token `--alkia-light`, que se usa en badges/chips (UseCases, Pricing,
+  Problem, HowItWorks, Showroom) — el logo nunca se muestra encima.
+
+### Hallazgos del audit (no tocados en este PR)
+
+- **No hay `og:image` ni `twitter:image`** — `openGraph` en `layout.tsx` solo
+  define `title`/`description`/`type`. Compartir alkia.cl va sin imagen.
+- **No hay manifest** (`manifest.json`/`.ts`/`site.webmanifest`).
+- **`public/logo.svg` es basura muerta:** dice **"✦ Asistia"** — el nombre
+  viejo de la marca — en `#10b981`, fuera de paleta. Sin referencias, igual
+  que los SVG del scaffold de Next (`file`, `globe`, `next`, `vercel`,
+  `window`).
+- **`public/brand/alkia-icon.png` sigue sin referencias** en el código.
+
+---
+
 ## 2026-08-10 — Swap del logo Alkia (wordmark con transparencia real)
 
 Reemplazo de los 4 assets de marca por el wordmark nuevo
