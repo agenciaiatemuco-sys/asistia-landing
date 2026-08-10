@@ -43,7 +43,7 @@ export default function Navbar() {
             src="/brand/alkia-wordmark.png"
             alt="Alkia"
             width={112}
-            height={36}
+            height={40}
             style={{ height: "auto" }}
             priority
           />
