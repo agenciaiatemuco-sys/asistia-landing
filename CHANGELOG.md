@@ -1,5 +1,67 @@
 # Changelog
 
+## 2026-08-20 — Estructura de planes 2026: Pro 2.500, Business 5.000
+
+Ajuste de volúmenes de la estructura de planes post tarifas Meta Chile
+(`DECISION_PLANES_PRECIOS_2026.md` §2). **Los precios no se tocan** — solo baja
+el volumen incluido de Pro y Business. Es cambio de copy: la landing no tiene
+lógica de planes.
+
+### Qué cambió
+
+Los tres valores viven en `components/Pricing.tsx` y en ningún otro lugar del
+repo (verificado con grep sobre `interacc` en todo el árbol):
+
+- **Pro:** `3.000 → 2.500` interacciones/mes (línea del array `PLANS`).
+- **Business:** `10.000 → 5.000` interacciones/mes.
+- **Banner Enterprise:** «¿Más de 10.000 interacciones al mes?» →
+  «¿Más de **5.000** interacciones al mes?».
+
+### Qué quedó igual (a propósito)
+
+- **Todos los precios:** Micro `$39.900`, Starter `$79.900`, Pro `$139.900`,
+  Business `$199.900`. La decisión baja volumen, no cambia tarifa.
+- **Micro y Starter:** 400 y 1.000 interacciones, sin cambio, trials de 14d
+  intactos.
+- **Enterprise sigue sin precio ni bandas.** Por §6 del documento, la landing
+  publica solo «conversemos»: no se menciona Enterprise 1/2 ni la banda
+  $299.900-$499.900, que son internos. CTA sigue siendo «Solicitar reunión →»
+  al `waLink` de siempre.
+- **«Hasta 5.000 interacciones/mes»** en Business, en vez de redactar el «tope
+  duro» del documento. El tope es real, pero «hasta» ya es el patrón de las
+  otras 3 cards y el comportamiento al límite (§4) se comunica en el panel, no
+  acá.
+- **Colaboradores, features, tags, badges y CTAs:** sin tocar. Los
+  colaboradores de la estructura nueva (0/1/3/5) ya coincidían con la landing.
+
+### Lo que NO está en este repo
+
+- **`lib/plan.ts` / `PLAN_CONFIGS`** no existe acá — `lib/` solo tiene
+  `links.ts`. El gate técnico de límites vive en el dashboard, así que el
+  cambio de §7 (Pro 2.500, Business 5.000 aplicados de verdad) es un PR aparte
+  en ese repo. **Hasta que se haga, la landing promete menos de lo que el
+  sistema deja consumir** — desalineado a favor del cliente, no al revés.
+- **`/contratar`** también vive en el dashboard (`DASHBOARD_URL`); los botones
+  de acá solo linkean con `?plan=`.
+- No hay `/api/chat` ni prompts en este repo: el cambio no toca el hot-path.
+
+### Pendientes del documento que esta entrada NO cubre
+
+- **Recordatorios como feature «desde Starter» con su tope** (§6) — no existe
+  hoy en las cards; es copy nuevo, no un número a corregir.
+- **Hito de septiembre (§8):** Meta publica las tarifas definitivas de octubre
+  a más tardar el 1-sep. Los precios se congelan ahí. Estos volúmenes son la
+  estructura de trabajo.
+
+### Verificación
+
+- `npm run build` ✅ · `npm run lint` ✅ (1 warning preexistente de `<img>` en
+  `app/layout.tsx`).
+- Confirmado sobre el HTML prerenderizado del build: las 5 cifras salen
+  400 / 1.000 / 2.500 / 5.000 y el banner en 5.000. Cero ocurrencias de
+  «3.000 interacciones» o «10.000 interacciones» en el bundle.
+
+
 ## 2026-08-20 — Número de WhatsApp nuevo (`56985614833`)
 
 El número anterior (`56981748168`) ya no existe. El bot de Alkia atiende ahora
