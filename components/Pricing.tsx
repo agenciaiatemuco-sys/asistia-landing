@@ -66,7 +66,7 @@ const PLANS: Plan[] = [
     plan: "pro",
     desc: "Para negocios con mayor volumen de mensajes y pedidos.",
     features: [
-      "Hasta 3.000 interacciones/mes",
+      "Hasta 2.500 interacciones/mes",
       "3 colaboradores",
       "Panel completo",
       "Pedidos y agendamiento",
@@ -81,7 +81,7 @@ const PLANS: Plan[] = [
     plan: "business",
     desc: "Para empresas con alto volumen y múltiples agentes.",
     features: [
-      "Hasta 10.000 interacciones/mes",
+      "Hasta 5.000 interacciones/mes",
       "5 colaboradores",
       "Panel completo",
       "Pedidos y agendamiento",
@@ -216,7 +216,7 @@ export default function Pricing() {
               A medida
             </div>
             <h3 className="text-2xl font-extrabold text-white mb-2">
-              ¿Más de 10.000 interacciones al mes?
+              ¿Más de 5.000 interacciones al mes?
             </h3>
             <p className="text-slate-400 text-sm max-w-lg">
               Conversemos un plan a tu medida. Múltiples instancias,
