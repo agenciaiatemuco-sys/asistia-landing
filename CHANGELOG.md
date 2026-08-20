@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-08-20 — Número de WhatsApp nuevo (`56985614833`)
+
+El número anterior (`56981748168`) ya no existe. El bot de Alkia atiende ahora
+en **+56 9 8561 4833**. Cambio de una línea: `WA_NUMBER` en `lib/links.ts` es
+la única fuente del número, así que ningún componente se toca.
+
+### Qué cambió
+
+- **`lib/links.ts`:** `WA_NUMBER` pasa de `56981748168` a `56985614833`.
+
+### Qué quedó igual (verificado en el bundle compilado)
+
+- **Los 12 `wa.me` con mensaje precargado:** los 10 `d.tag` del Showroom
+  (`?text=demo-salud`, `demo-medico`, `demo-despachos`, `demo-odonto`,
+  `demo-estetica`, `demo-legal`, `demo-ecommerce`, `demo-stock`,
+  `demo-restaurant`, `demo-hoteleria`), el de Enterprise y el de plantillas.
+  Solo cambia el número: el `?text=` y su URL-encode quedan idénticos.
+- **Los `wa.me` sin mensaje** de `WhatsAppButton` y `Footer`.
+- **`waLink()`, el `CHANGELOG` histórico y todo lo demás:** sin tocar. La
+  entrada del 2026-08-10 sigue citando el número viejo a propósito — es el
+  registro de lo que era cierto en esa fecha, no se reescribe.
+
 ## 2026-08-10 — Logo v2: paleta corregida (`alkia-wordmark-paleta-v2.png`)
 
 Segundo swap del logo el mismo día, sobre el que se mergeó en #14. Corrige la
